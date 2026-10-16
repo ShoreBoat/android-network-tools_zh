@@ -13,6 +13,12 @@ on:
 permissions:
   contents: write
 
+# 同一时间只跑一个 APK 构建：本仓库的 main 与 zh-cn 是镜像分支，
+# 同时推送会让两个运行抢同一个 Gradle 缓存键（key 不含 ref），已出现过偶发失败。
+concurrency:
+  group: zh-apk
+  cancel-in-progress: false
+
 jobs:
   apk:
     name: 构建 debug APK
