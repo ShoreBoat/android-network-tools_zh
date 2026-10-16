@@ -70,7 +70,13 @@ jobs:
   instrumented-tests:
     # Firebase Test Lab is quota-limited on the free tier. Keep cloud device
     # runs for pushes to main; pull requests retain the local build/test gates.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    #
+    # 二开：Test Lab 需要上游仓库的 FIREBASE_SERVICE_ACCOUNT_KEY secret，fork 上没有，
+    # 因此限定只在原仓库运行，避免 fork 上每次推送都出现失败的红叉。
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'AieatAssam/android-network-tools'
     runs-on: ubuntu-latest
     # Runs on Firebase Test Lab instead of a GitHub-hosted emulator. The
     # reactivecircus/android-emulator-runner + local KVM/nested-virtualization
