@@ -1,0 +1,79 @@
+name: 中文版 APK
+
+# 二开新增：上游 ci.yml / release.yml 依赖 Firebase 与签名密钥（fork 上没有），
+# 这里提供一个不依赖任何 secret 的工作流 —— 推送即产出可直接安装的 APK。
+# debug 包使用仓库内已提交的 app/debug.keystore 签名，签名一致、可直接覆盖安装。
+on:
+  push:
+    branches: [ main, zh-cn ]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    name: 构建 debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v6
+
+      - name: 安装 JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: 缓存 Gradle
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle/libs.versions.toml', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: 允许 gradlew 执行
+        run: chmod +x ./gradlew
+
+      - name: 构建中文版 APK
+        run: |
+          VERSION_NAME="${GITHUB_REF_NAME//\//-}"
+          ./gradlew :app:assembleDebug --no-daemon --no-parallel \
+            -PversionName="$VERSION_NAME" -PversionCode="${GITHUB_RUN_NUMBER}"
+
+      - name: 重命名产物
+        run: |
+          SHORT_SHA="${GITHUB_SHA:0:7}"
+          VERSION_NAME="${GITHUB_REF_NAME//\//-}"
+          cp app/build/outputs/apk/debug/app-debug.apk \
+             "netswiss-zh-${VERSION_NAME}-${SHORT_SHA}.apk"
+          ls -la netswiss-zh-*.apk
+
+      - name: 上传 APK 构建产物
+        uses: actions/upload-artifact@v7
+        with:
+          name: netswiss-zh-apk
+          path: netswiss-zh-*.apk
+          if-no-files-found: error
+
+      # 打 tag（v*）时自动创建 Release 并附上 APK，方便直接下载安装
+      - name: 发布 Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: netswiss-zh-*.apk
+          generate_release_notes: true
+          body: |
+            简体中文二开版 APK（debug 签名，可直接安装）。
+
+            - 界面语言：随系统自动切换，也可在「设置 → 应用语言」单独指定
+            - 已内置国内公共 DNS 预设：阿里 DNS / DNSPod（腾讯）/ 114DNS
+            - 完整汉化：952 条字符串与英文版逐条对齐
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
