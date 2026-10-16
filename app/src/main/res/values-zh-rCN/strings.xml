@@ -7,7 +7,7 @@
     in sync with values/strings.xml — the build fails on a mismatch.
 -->
 <resources>
-    <string name="app_name">NetSwiss</string>
+    <string name="app_name">网络工具箱</string>
     <string name="app_name_full">Net Swiss Knife</string>
 
     <!-- 首页 -->
@@ -28,7 +28,6 @@
     <!-- 更多工具面板 -->
     <string name="more_sheet_title">全部工具</string>
     <plurals name="more_sheet_subtitle">
-        <item quantity="one">最多可将 %1$d 个工具固定到导航栏</item>
         <item quantity="other">最多可将 %1$d 个工具固定到导航栏</item>
     </plurals>
     <string name="more_pin_description">固定 %1$s</string>
@@ -38,7 +37,6 @@
     <string name="more_section_security">安全</string>
     <string name="more_section_utilities">实用工具</string>
     <plurals name="more_pin_limit_reached">
-        <item quantity="one">最多固定 %1$d 个工具，请先取消固定一个</item>
         <item quantity="other">最多固定 %1$d 个工具，请先取消固定一个</item>
     </plurals>
 
@@ -147,7 +145,6 @@
     <string name="ports_range_error">1–65535</string>
     <string name="ports_range_order_error">起始端口不能大于结束端口</string>
     <plurals name="ports_range_count">
-        <item quantity="one">已选择 %1$d 个端口</item>
         <item quantity="other">已选择 %1$d 个端口</item>
     </plurals>
     <string name="ports_timeout_label">超时（毫秒）</string>
@@ -173,7 +170,6 @@
     <string name="ports_duration_label">耗时</string>
     <string name="ports_host_label_result">主机</string>
     <plurals name="ports_progress_format">
-        <item quantity="one">%1$d / %2$d 个端口</item>
         <item quantity="other">%1$d / %2$d 个端口</item>
     </plurals>
     <string name="ports_ms_suffix">ms</string>
@@ -216,7 +212,6 @@
     <!-- 局域网扫描结果 -->
     <string name="lan_progress_format">%1$d / %2$d</string>
     <plurals name="lan_hosts_found_format">
-        <item quantity="one">目前已发现 %1$d 台主机</item>
         <item quantity="other">目前已发现 %1$d 台主机</item>
     </plurals>
     <string name="lan_live_hosts_header">在线主机</string>
@@ -315,7 +310,6 @@
     <string name="wifi_refresh_interval_30s">30 秒</string>
     <string name="wifi_refresh_interval_60s">60 秒</string>
     <plurals name="wifi_results_age">
-        <item quantity="one">%1$d 秒前更新</item>
         <item quantity="other">%1$d 秒前更新</item>
     </plurals>
     <string name="wifi_results_age_unknown">无法获取结果更新时间</string>
@@ -346,7 +340,6 @@
     <string name="wifi_best_channel_title">最佳信道</string>
     <string name="wifi_best_channel_body">2.4 GHz 上信道 %1$d 最不拥挤</string>
     <plurals name="wifi_networks_count">
-        <item quantity="one">%1$d 个网络</item>
         <item quantity="other">%1$d 个网络</item>
     </plurals>
     <string name="wifi_aps_count">%1$d 个 AP</string>
@@ -377,7 +370,6 @@
     <string name="traceroute_idle_subtitle">支持主机名和 IPv4 地址，并显示每一跳的地理位置和全程统计。</string>
     <string name="traceroute_running_title">正在追踪 %1$s…</string>
     <plurals name="traceroute_running_subtitle">
-        <item quantity="one">已发现 %1$d 跳</item>
         <item quantity="other">已发现 %1$d 跳</item>
     </plurals>
     <string name="traceroute_error_title">追踪失败</string>
@@ -451,7 +443,6 @@
     <string name="topology_cancel_button">取消/重置</string>
     <string name="topology_idle_tagline">发现你的网络拓扑</string>
     <plurals name="topology_scanning_badge">
-        <item quantity="one">正在扫描…已发现 %1$d 个节点</item>
         <item quantity="other">正在扫描…已发现 %1$d 个节点</item>
     </plurals>
     <string name="topology_node_detail_system">系统</string>
@@ -499,7 +490,6 @@
     <!-- TLS 到期徽标 -->
     <string name="tls_expired">已过期</string>
     <plurals name="tls_days_left">
-        <item quantity="one">%1$d 天</item>
         <item quantity="other">%1$d 天</item>
     </plurals>
 
@@ -583,7 +573,6 @@
     <!-- HTTP 探测结果 -->
     <string name="httprobe_response_time_label">响应时间</string>
     <plurals name="httprobe_redirects_label">
-        <item quantity="one">%1$d 次重定向</item>
         <item quantity="other">%1$d 次重定向</item>
     </plurals>
     <string name="httprobe_method_used">方法</string>
@@ -630,11 +619,9 @@
     <string name="subnet_usable_hosts">可用主机数</string>
     <string name="subnet_binary_breakdown">二进制拆分</string>
     <plurals name="subnet_network_bits">
-        <item quantity="one">网络位：%1$d 位</item>
         <item quantity="other">网络位：%1$d 位</item>
     </plurals>
     <plurals name="subnet_host_bits">
-        <item quantity="one">主机位：%1$d 位</item>
         <item quantity="other">主机位：%1$d 位</item>
     </plurals>
     <string name="subnet_binary_ip">IP 地址</string>
@@ -658,7 +645,6 @@
     <string name="subnet_prefix_of_32">%1$d / 32</string>
     <string name="subnet_host_bit_count">主机位</string>
     <plurals name="subnet_bits_count">
-        <item quantity="one">%1$d 位</item>
         <item quantity="other">%1$d 位</item>
     </plurals>
     <!-- 模式切换 -->
@@ -1245,4 +1231,85 @@
     <!-- 设置 – 应用语言 -->
     <string name="settings_language_label">应用语言</string>
     <string name="settings_language_subtitle">选择本应用使用的语言</string>
+    <!-- ── 从上一版 APK 恢复的条目（二开新增：工具帮助/服务商/语言等） ── -->
+    <string name="settings_language_system">跟随系统</string>
+    <string name="settings_language_chinese">中文</string>
+    <string name="settings_language_english">English</string>
+    <string name="ports_preset_common">常用服务</string>
+    <string name="ports_preset_well_known">知名端口 (1–1024)</string>
+    <string name="ports_preset_web">Web 服务</string>
+    <string name="ports_preset_database">数据库</string>
+    <string name="ports_preset_mail">邮件服务</string>
+    <string name="ports_preset_remote">远程访问</string>
+    <string name="ports_preset_custom">自定义范围</string>
+    <string name="dns_server_system_name">系统 DNS</string>
+    <string name="dns_server_system_desc">使用设备上配置的 DNS 服务器</string>
+    <string name="dns_server_google_name">Google DNS</string>
+    <string name="dns_server_google_desc">8.8.8.8 - Google 快速可靠的公共解析服务器</string>
+    <string name="dns_server_cloudflare_name">Cloudflare DNS</string>
+    <string name="dns_server_cloudflare_desc">1.1.1.1 - Cloudflare 注重隐私的公共解析服务器</string>
+    <string name="dns_server_opendns_name">OpenDNS</string>
+    <string name="dns_server_opendns_desc">208.67.222.222 - 思科 OpenDNS，支持可选的内容过滤</string>
+    <string name="dns_server_quad9_name">Quad9</string>
+    <string name="dns_server_quad9_desc">9.9.9.9 - 注重安全的解析服务器，可拦截恶意域名</string>
+    <string name="dns_server_alidns_name">阿里 DNS</string>
+    <string name="dns_server_alidns_desc">223.5.5.5 - 阿里公共 DNS，国内访问延迟低</string>
+    <string name="dns_server_dnspod_name">DNSPod（腾讯）</string>
+    <string name="dns_server_dnspod_desc">119.29.29.29 - 腾讯公共 DNS，国内访问延迟低</string>
+    <string name="dns_server_114_name">114DNS</string>
+    <string name="dns_server_114_desc">114.114.114.114 - 国内运营多年的公共 DNS</string>
+    <string name="dns_server_custom_name">自定义</string>
+    <string name="dns_server_custom_desc">%1$s</string>
+    <string name="dns_type_a_desc">将主机名映射到 IPv4 地址（32 位）。这是最常见的记录类型，用于把域名解析为 IP 地址。</string>
+    <string name="dns_type_aaaa_desc">将主机名映射到 IPv6 地址（128 位）。用于支持 IPv6 连接的现代双栈网络。</string>
+    <string name="dns_type_mx_desc">邮件交换记录：指定负责接收该域名邮件的邮件服务器，并附带优先级值（数值越小优先级越高）。</string>
+    <string name="dns_type_txt_desc">文本记录：存储任意可读或机器可读的文本。常用于 SPF（邮件认证）、DKIM 密钥、DMARC 策略和域名验证。</string>
+    <string name="dns_type_cname_desc">规范名称记录：将一个主机名别名指向另一个主机名。解析器会沿别名链查找，直到找到 A 或 AAAA 记录。</string>
+    <string name="dns_type_ns_desc">名称服务器记录：将 DNS 区域委派给指定的权威名称服务器。这些服务器负责该区域内的所有记录。</string>
+    <string name="dns_type_soa_desc">授权起始记录：提供 DNS 区域的管理信息：主名称服务器、责任人邮箱、序列号以及刷新/重试/过期计时器。</string>
+    <string name="dns_type_ptr_desc">指针记录：用于反向 DNS 查询，将 IP 地址映射回主机名。查询格式：last-octet.third-octet.second-octet.first-octet.in-addr.arpa</string>
+    <string name="dns_type_srv_desc">服务记录：指定特定服务（如 SIP、XMPP）的主机和端口。包含优先级、权重、端口和目标主机名。</string>
+    <string name="dns_type_caa_desc">证书颁发机构授权记录：控制允许哪些证书颁发机构为该域名签发 SSL/TLS 证书。</string>
+    <string name="dns_via_server">经由 %1$s</string>
+    <string name="dns_ttl_value">TTL %1$s</string>
+    <string name="dns_soa_primary_ns">主名称服务器</string>
+    <string name="dns_soa_responsible">责任人邮箱</string>
+    <string name="dns_soa_serial">序列号</string>
+    <string name="dns_soa_refresh">刷新间隔</string>
+    <string name="dns_soa_retry">重试间隔</string>
+    <string name="dns_soa_expire">过期时间</string>
+    <string name="dns_soa_min_ttl">最小 TTL</string>
+    <string name="dns_field_label_format">%1$s：</string>
+    <string name="wifi_sort_signal">信号强度</string>
+    <string name="wifi_sort_name">名称</string>
+    <string name="wifi_sort_channel">信道</string>
+    <string name="wifi_band_format">%1$s GHz</string>
+    <string name="ping_err_ttl_exceeded">超出 TTL</string>
+    <string name="ping_err_connection_refused">目标拒绝连接</string>
+    <string name="ping_err_connection_refused_from">目标拒绝连接（来自 %1$s）</string>
+    <string name="error_no_network">无网络连接</string>
+    <string name="error_unknown">未知错误</string>
+    <string name="error_scan_failed">扫描失败：%1$s</string>
+    <string name="ping_error_failed">Ping 失败</string>
+    <string name="ping_error_no_response">未收到来自 %1$s 的响应</string>
+    <string name="traceroute_error_failed">路由追踪失败</string>
+    <string name="traceroute_error_no_route">未能找到通往 %1$s 的路由</string>
+    <string name="mdns_error_discovery_failed">服务发现失败</string>
+    <string name="httprobe_error_request_failed">请求失败：%1$s</string>
+    <string name="httprobe_error_unknown">未知请求错误</string>
+    <string name="tls_error_inspection_failed">TLS 检测失败：%1$s</string>
+    <string name="tls_error_unknown">未知的 TLS 检测错误</string>
+    <string name="topology_status_starting">正在启动…</string>
+    <string name="placeholder_coming_soon">即将推出</string>
+    <string name="placeholder_planned_features">计划功能</string>
+    <string name="topology_snmp_config">SNMP 配置</string>
+    <string name="topology_idle_seed_hint">输入种子 IP 并在上方配置 SNMP 设置</string>
+    <string name="topology_error_title">发现失败</string>
+    <string name="topology_no_nodes">尚未发现节点</string>
+    <string name="topology_snmp_unreachable">SNMP 无法访问</string>
+    <string name="topology_vendor_model">厂商 / 型号</string>
+    <string name="topology_unknown">未知</string>
+    <string name="topology_firmware">固件</string>
+    <string name="topology_location">位置</string>
+    <string name="topology_uptime">运行时间</string>
 </resources>

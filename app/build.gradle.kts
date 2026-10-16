@@ -111,6 +111,16 @@ android {
         buildConfig = true
     }
 
+    bundle {
+        // 二开 addition: the app ships an in-app language switcher (Settings → App language)
+        // that changes the locale at runtime with LocaleManager. If Play split the bundle by
+        // language, a locale the user never had installed would be missing from the APK, so
+        // keep every locale in the base module.
+        language {
+            enableSplit = false
+        }
+    }
+
     lint {
         // The codebase currently reports 0 lint errors (11 warnings, 10 hints),
         // so this gates on errors without needing a baseline to grandfather

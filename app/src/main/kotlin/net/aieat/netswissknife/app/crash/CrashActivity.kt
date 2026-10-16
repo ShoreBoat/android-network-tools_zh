@@ -56,10 +56,16 @@ import androidx.core.view.WindowCompat
 import androidx.compose.ui.unit.dp
 import net.aieat.netswissknife.app.MainActivity
 import net.aieat.netswissknife.app.R
+import net.aieat.netswissknife.app.i18n.AppLanguage
 import net.aieat.netswissknife.app.ui.theme.NetSwissKnifeTheme
 import kotlinx.coroutines.launch
 
 class CrashActivity : ComponentActivity() {
+
+    /** Applies the per-app language choice (二开 addition) on Android 12 and below. */
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // See MainActivity: androidx.activity's enableEdgeToEdge() relies on APIs

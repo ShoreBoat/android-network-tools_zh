@@ -58,6 +58,33 @@ sealed class DnsServer(
         const val PRIMARY = "9.9.9.9"
     }
 
+    /** AliDNS (阿里公共 DNS) – 223.5.5.5 / 223.6.6.6 */
+    object AliDns : DnsServer(
+        displayName = "AliDNS",
+        description = "223.5.5.5 - Alibaba public resolver with low latency in mainland China"
+    ) {
+        const val PRIMARY = "223.5.5.5"
+        const val SECONDARY = "223.6.6.6"
+    }
+
+    /** DNSPod (腾讯公共 DNS) – 119.29.29.29 / 182.254.116.116 */
+    object Dnspod : DnsServer(
+        displayName = "DNSPod",
+        description = "119.29.29.29 - Tencent public resolver with low latency in mainland China"
+    ) {
+        const val PRIMARY = "119.29.29.29"
+        const val SECONDARY = "182.254.116.116"
+    }
+
+    /** 114DNS – 114.114.114.114 / 114.114.115.115 */
+    object Dns114 : DnsServer(
+        displayName = "114DNS",
+        description = "114.114.114.114 - Long-running public resolver popular in mainland China"
+    ) {
+        const val PRIMARY = "114.114.114.114"
+        const val SECONDARY = "114.114.115.115"
+    }
+
     /** A user-specified DNS server IP address. */
     data class Custom(val address: String) : DnsServer(
         displayName = "Custom",
@@ -65,8 +92,13 @@ sealed class DnsServer(
     )
 
     companion object {
-        /** Built lazily to avoid JVM class-initialization cycles between the sealed parent and objects. */
+        /**
+         * Built lazily to avoid JVM class-initialization cycles between the sealed parent and objects.
+         *
+         * Ordering matters for the dropdown: the device resolver first, then the public resolvers
+         * that are fastest from mainland China (:aieat fork), then the international ones.
+         */
         val presets: List<DnsServer>
-            get() = listOf(System(), Google, Cloudflare, OpenDns, Quad9)
+            get() = listOf(System(), AliDns, Dnspod, Dns114, Google, Cloudflare, OpenDns, Quad9)
     }
 }

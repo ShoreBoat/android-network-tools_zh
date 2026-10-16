@@ -105,6 +105,7 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.testTag
 import net.aieat.netswissknife.app.ui.components.hapticAction
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.theme.AppShapes
 import net.aieat.netswissknife.app.ui.theme.StatusBad
 import net.aieat.netswissknife.app.ui.theme.StatusCritical
@@ -343,7 +344,7 @@ fun WifiScanScreen(
     WifiStatusCard(
         icon   = { Icon(Icons.Default.WifiOff, null, Modifier.size(48.dp), tint = MaterialTheme.colorScheme.error) },
         title  = stringResource(R.string.wifi_error_title),
-        body   = message,
+        body   = localizedUiError(message),
         action = { Button(onRetry) { Text(stringResource(R.string.wifi_retry)) } }
     )
 }
@@ -606,7 +607,7 @@ fun WifiScanScreen(
             Tab(
                 selected = index == selectedIndex,
                 onClick  = { onSelect(band) },
-                text     = { Text("${band.ghzLabel} GHz") }
+                text     = { Text(stringResource(R.string.wifi_band_format, band.ghzLabel)) }
             )
         }
     }
@@ -803,7 +804,7 @@ private fun WifiSortRow(
                 FilterChip(
                     selected = current == order,
                     onClick  = { onSelect(order) },
-                    label    = { Text(order.label, style = MaterialTheme.typography.labelSmall) }
+                    label    = { Text(stringResource(order.labelRes), style = MaterialTheme.typography.labelSmall) }
                 )
             }
         }

@@ -107,6 +107,10 @@ import net.aieat.netswissknife.app.ui.components.ToolHeroHeader
 import net.aieat.netswissknife.app.ui.components.ToolErrorCard
 import net.aieat.netswissknife.app.ui.components.hapticAction
 import net.aieat.netswissknife.app.R
+import net.aieat.netswissknife.app.ui.dnsRecordTypeDescRes
+import net.aieat.netswissknife.app.ui.dnsServerDescRes
+import net.aieat.netswissknife.app.ui.dnsServerNameRes
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.HelpSection
 import net.aieat.netswissknife.app.ui.components.RecentHostsRow
 import net.aieat.netswissknife.app.ui.theme.AppMotion
@@ -511,7 +515,7 @@ private fun RecordTypeDescription(recordType: DnsRecordType) {
                 tint = MaterialTheme.colorScheme.onSecondaryContainer
             )
             Text(
-                text = type.description,
+                text = stringResource(dnsRecordTypeDescRes(type)),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSecondaryContainer
             )
@@ -540,7 +544,7 @@ private fun DnsServerSelector(
 
     // Text shown in the field: preset display name, or the typed custom address.
     val fieldValue = if (selectedServer is DnsServer.Custom) customServerAddress
-                     else selectedServer.displayName
+                     else stringResource(dnsServerNameRes(selectedServer))
 
     // Custom server addresses must be literal IPs (IPv4 or IPv6).
     val isCustomInvalid = selectedServer is DnsServer.Custom &&
@@ -596,14 +600,14 @@ private fun DnsServerSelector(
                     text = {
                         Column {
                             Text(
-                                text = server.displayName,
+                                text = stringResource(dnsServerNameRes(server)),
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
                                 color = if (isSelected) MaterialTheme.colorScheme.primary
                                         else MaterialTheme.colorScheme.onSurface
                             )
                             Text(
-                                text = server.description,
+                                text = stringResource(dnsServerDescRes(server), server.description),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -723,7 +727,7 @@ private fun DnsErrorPanel(
     ToolErrorCard(
         modifier = modifier,
         title = stringResource(R.string.dns_error_title),
-        message = message,
+        message = localizedUiError(message),
     ) {
             TextButton(
                 onClick = onRetry,
@@ -849,7 +853,7 @@ private fun DnsResultSummaryCard(
                     ) {
                         RecordTypeBadge(type = result.recordType)
                         Text(
-                            text = "via ${result.server.displayName}",
+                            text = stringResource(R.string.dns_via_server, stringResource(dnsServerNameRes(result.server))),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -1117,7 +1121,7 @@ private fun TtlBadge(ttl: Long) {
         color = MaterialTheme.colorScheme.surfaceVariant
     ) {
         Text(
-            text = "TTL $ttlText",
+            text = stringResource(R.string.dns_ttl_value, ttlText),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
@@ -1174,7 +1178,15 @@ private fun RecordValueDisplay(record: DnsRecord) {
         DnsRecordType.SOA -> {
             // SOA has multiple space-separated fields: mname rname serial refresh retry expire minimum
             val fields = record.value.split(" ")
-            val labels = listOf("Primary NS", "Responsible", "Serial", "Refresh", "Retry", "Expire", "Min TTL")
+            val labels = listOf(
+                stringResource(R.string.dns_soa_primary_ns),
+                stringResource(R.string.dns_soa_responsible),
+                stringResource(R.string.dns_soa_serial),
+                stringResource(R.string.dns_soa_refresh),
+                stringResource(R.string.dns_soa_retry),
+                stringResource(R.string.dns_soa_expire),
+                stringResource(R.string.dns_soa_min_ttl)
+            )
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 fields.forEachIndexed { i, value ->
                     if (i < labels.size) {
@@ -1231,7 +1243,7 @@ private fun LabeledValue(label: String, value: String) {
         verticalAlignment = Alignment.Top
     ) {
         Text(
-            text = "$label:",
+            text = stringResource(R.string.dns_field_label_format, label),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.width(80.dp)

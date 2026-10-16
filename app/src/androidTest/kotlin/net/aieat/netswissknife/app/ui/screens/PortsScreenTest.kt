@@ -167,7 +167,7 @@ class PortsScreenTest {
         composeRule.mainClock.advanceTimeBy(1_000L)
         composeRule.onNodeWithTag(PortsScreenTestTags.PRESET_FIELD).performClick()
         composeRule
-            .onAllNodesWithText(PortScanPreset.COMMON.label)
+            .onAllNodesWithText(context.getString(R.string.ports_preset_common))
             .onLast()
             .performClick()
 

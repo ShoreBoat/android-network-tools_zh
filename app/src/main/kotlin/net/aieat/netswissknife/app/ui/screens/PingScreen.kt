@@ -125,6 +125,7 @@ import net.aieat.netswissknife.app.ui.components.rememberLocalNetworkPermissionR
 import net.aieat.netswissknife.app.ui.components.ToolStopButton
 import net.aieat.netswissknife.app.ui.components.hapticAction
 import net.aieat.netswissknife.app.R
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.HelpSection
 import net.aieat.netswissknife.app.ui.components.RecentHostsRow
 import net.aieat.netswissknife.app.ui.components.ToolHelpSheet
@@ -246,7 +247,7 @@ fun PingScreen(
                             onClear = viewModel::onClearResults
                         )
                         is PingUiState.Error -> PingErrorPanel(
-                            message = state.message,
+                            message = localizedUiError(state.message),
                             onRetry = viewModel::onRetry,
                             onClear = viewModel::onClearResults
                         )
@@ -1193,8 +1194,10 @@ private fun PacketRow(packet: PingPacketResult) {
                 )
             }
             PingStatus.UNREACHABLE -> {
+                val errorText = packet.errorMessage
                 Text(
-                    text = packet.errorMessage ?: stringResource(R.string.ping_unreachable_label_result),
+                    text = errorText?.let { localizedUiError(it) }
+                        ?: stringResource(R.string.ping_unreachable_label_result),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.tertiary,
                     maxLines = 1,
@@ -1203,8 +1206,10 @@ private fun PacketRow(packet: PingPacketResult) {
                 )
             }
             PingStatus.ERROR -> {
+                val errorText = packet.errorMessage
                 Text(
-                    text = packet.errorMessage ?: stringResource(R.string.ping_error_label_result),
+                    text = errorText?.let { localizedUiError(it) }
+                        ?: stringResource(R.string.ping_error_label_result),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.error,
                     maxLines = 1,

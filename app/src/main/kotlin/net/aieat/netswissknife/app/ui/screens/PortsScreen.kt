@@ -106,12 +106,14 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import net.aieat.netswissknife.app.ui.components.ToolHeroHeader
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.ToolErrorCard
 import net.aieat.netswissknife.app.ui.theme.AppMotion
 import net.aieat.netswissknife.app.ui.components.rememberLocalNetworkPermissionRequester
 import net.aieat.netswissknife.app.ui.components.ToolStopButton
 import net.aieat.netswissknife.app.ui.components.hapticAction
 import net.aieat.netswissknife.app.R
+import net.aieat.netswissknife.app.ui.portPresetLabelRes
 import net.aieat.netswissknife.app.ui.components.HelpSection
 import net.aieat.netswissknife.app.ui.components.RecentHostsRow
 import net.aieat.netswissknife.app.ui.components.ToolHelpSheet
@@ -414,7 +416,7 @@ private fun PortScanInputCard(
                 onExpandedChange = { presetExpanded = !presetExpanded }
             ) {
                 OutlinedTextField(
-                    value = selectedPreset.label,
+                    value = stringResource(portPresetLabelRes(selectedPreset)),
                     onValueChange = {},
                     readOnly = true,
                     label = { Text(stringResource(R.string.ports_preset_label)) },
@@ -430,7 +432,7 @@ private fun PortScanInputCard(
                 ) {
                     PortScanPreset.entries.forEach { preset ->
                         DropdownMenuItem(
-                            text = { Text(preset.label) },
+                            text = { Text(stringResource(portPresetLabelRes(preset))) },
                             onClick = {
                                 onPresetChange(preset)
                                 presetExpanded = false
@@ -731,7 +733,7 @@ private fun PortScanErrorCard(
 ) {
     ToolErrorCard(
         title = stringResource(R.string.ports_error_title),
-        message = message,
+        message = localizedUiError(message),
     ) {
         FilledTonalButton(onClick = onRetry) {
             Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(16.dp))

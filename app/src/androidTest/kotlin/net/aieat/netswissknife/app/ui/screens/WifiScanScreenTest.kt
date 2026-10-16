@@ -239,7 +239,7 @@ class WifiScanScreenTest {
         }
         composeRule.mainClock.advanceTimeBy(1_000L)
 
-        composeRule.onNodeWithText(ApSortOrder.SSID.label).performClick()
+        composeRule.onNodeWithText(context.getString(ApSortOrder.SSID.labelRes)).performClick()
 
         verify(exactly = 1) { viewModel.setSortOrder(ApSortOrder.SSID) }
     }

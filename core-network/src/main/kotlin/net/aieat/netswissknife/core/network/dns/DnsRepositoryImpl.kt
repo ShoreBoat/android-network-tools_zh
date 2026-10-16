@@ -72,6 +72,9 @@ class DnsRepositoryImpl(
             is DnsServer.Cloudflare -> simpleResolver(DnsServer.Cloudflare.PRIMARY)
             is DnsServer.OpenDns -> simpleResolver(DnsServer.OpenDns.PRIMARY)
             is DnsServer.Quad9 -> simpleResolver(DnsServer.Quad9.PRIMARY)
+            is DnsServer.AliDns -> simpleResolver(DnsServer.AliDns.PRIMARY)
+            is DnsServer.Dnspod -> simpleResolver(DnsServer.Dnspod.PRIMARY)
+            is DnsServer.Dns114 -> simpleResolver(DnsServer.Dns114.PRIMARY)
             is DnsServer.Custom -> simpleResolver(server.address)
         }
 
@@ -127,6 +130,9 @@ class DnsRepositoryImpl(
         is DnsServer.Cloudflare -> formatServerAddress(DnsServer.Cloudflare.PRIMARY)
         is DnsServer.OpenDns -> formatServerAddress(DnsServer.OpenDns.PRIMARY)
         is DnsServer.Quad9 -> formatServerAddress(DnsServer.Quad9.PRIMARY)
+        is DnsServer.AliDns -> formatServerAddress(DnsServer.AliDns.PRIMARY)
+        is DnsServer.Dnspod -> formatServerAddress(DnsServer.Dnspod.PRIMARY)
+        is DnsServer.Dns114 -> formatServerAddress(DnsServer.Dns114.PRIMARY)
         is DnsServer.Custom -> formatServerAddress(server.address)
     }
 

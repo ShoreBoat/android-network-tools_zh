@@ -41,9 +41,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import net.aieat.netswissknife.app.R
 
 /**
  * Reusable "Coming Soon" screen shown for tools that haven't been implemented yet.
@@ -163,7 +165,7 @@ fun ToolPlaceholderContent(
                     )
                     Spacer(Modifier.width(8.dp))
                     Text(
-                        text  = "Coming Soon",
+                        text  = stringResource(R.string.placeholder_coming_soon),
                         style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
                         color = MaterialTheme.colorScheme.onTertiaryContainer
                     )
@@ -173,7 +175,7 @@ fun ToolPlaceholderContent(
                 if (features.isNotEmpty()) {
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        text  = "Planned features",
+                        text  = stringResource(R.string.placeholder_planned_features),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )

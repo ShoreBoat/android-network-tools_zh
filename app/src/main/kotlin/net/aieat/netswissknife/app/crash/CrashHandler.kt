@@ -2,6 +2,7 @@ package net.aieat.netswissknife.app.crash
 
 import android.content.Context
 import android.content.Intent
+import net.aieat.netswissknife.app.R
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.text.SimpleDateFormat
@@ -28,7 +29,7 @@ class CrashHandler(
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 putExtra(CrashActivity.EXTRA_STACK_TRACE, stackTrace)
                 putExtra(CrashActivity.EXTRA_EXCEPTION_CLASS, throwable.javaClass.name)
-                putExtra(CrashActivity.EXTRA_EXCEPTION_MESSAGE, throwable.message ?: "No message")
+                putExtra(CrashActivity.EXTRA_EXCEPTION_MESSAGE, throwable.message ?: context.getString(R.string.crash_no_message))
                 putExtra(CrashActivity.EXTRA_THREAD_NAME, thread.name)
                 putExtra(CrashActivity.EXTRA_TIMESTAMP, timestamp)
             }

@@ -92,6 +92,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import net.aieat.netswissknife.app.ui.components.ToolHeroHeader
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.ToolErrorCard
 import net.aieat.netswissknife.app.ui.components.rememberLocalNetworkPermissionRequester
 import net.aieat.netswissknife.app.ui.components.ToolStopButton
@@ -1339,7 +1340,7 @@ private fun TracerouteErrorPanel(
 ) {
     ToolErrorCard(
         title = stringResource(R.string.traceroute_error_title),
-        message = state.message,
+        message = localizedUiError(state.message),
     ) {
         FilledTonalButton(onClick = onClear) {
             Text(stringResource(R.string.traceroute_clear_button))

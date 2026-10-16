@@ -88,6 +88,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import net.aieat.netswissknife.app.ui.components.HeroTitleText
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.theme.AppMotion
 import net.aieat.netswissknife.app.ui.components.rememberLocalNetworkPermissionRequester
 import net.aieat.netswissknife.app.ui.components.ToolStopButton
@@ -153,7 +154,7 @@ fun MdnsDiscoveryScreen(viewModel: MdnsDiscoveryViewModel = hiltViewModel()) {
                     "idle" -> IdleHint()
                     "scanning_empty" -> ScanningPlaceholder()
                     "empty_done" -> EmptyResultHint()
-                    "error" -> ErrorCard(uiState.error ?: "Unknown error") { viewModel.reset() }
+                    "error" -> ErrorCard(localizedUiError(uiState.error ?: "Unknown error")) { viewModel.reset() }
                     else -> ServiceList(
                         servicesByType = uiState.servicesByType,
                         isScanning = uiState.isScanning

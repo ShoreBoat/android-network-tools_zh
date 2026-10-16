@@ -1224,11 +1224,104 @@
     <!-- Settings – Language (per-app locale) -->
     <string name="settings_language_label">App language</string>
     <string name="settings_language_subtitle">Choose the language used by this app</string>
+    <string name="settings_language_system">System</string>
+    <string name="settings_language_chinese">中文</string>
+    <string name="settings_language_english">English</string>
 
     <!-- HTTP Probe security ratings -->
     <string name="security_rating_pass">Pass</string>
     <string name="security_rating_warn">Warn</string>
     <string name="security_rating_fail">Fail</string>
     <string name="security_rating_info">Info</string>
+
+    <!-- Localized labels for pure-Kotlin models (mapped in app/ui/LocalizedLabels.kt) -->
+    <string name="ports_preset_common">Common services</string>
+    <string name="ports_preset_well_known">Well-known (1–1024)</string>
+    <string name="ports_preset_web">Web services</string>
+    <string name="ports_preset_database">Databases</string>
+    <string name="ports_preset_mail">Mail services</string>
+    <string name="ports_preset_remote">Remote access</string>
+    <string name="ports_preset_custom">Custom range</string>
+
+    <string name="dns_server_system_name">System DNS</string>
+    <string name="dns_server_system_desc">Uses the DNS server configured on your device</string>
+    <string name="dns_server_google_name">Google DNS</string>
+    <string name="dns_server_google_desc">8.8.8.8 - Google\'s fast &amp; reliable public resolver</string>
+    <string name="dns_server_cloudflare_name">Cloudflare DNS</string>
+    <string name="dns_server_cloudflare_desc">1.1.1.1 - Cloudflare\'s privacy-focused public resolver</string>
+    <string name="dns_server_opendns_name">OpenDNS</string>
+    <string name="dns_server_opendns_desc">208.67.222.222 - Cisco OpenDNS with optional content filtering</string>
+    <string name="dns_server_quad9_name">Quad9</string>
+    <string name="dns_server_quad9_desc">9.9.9.9 - Security-focused resolver that blocks malicious domains</string>
+
+    <!-- Mainland-China resolvers (二开 addition) -->
+    <string name="dns_server_alidns_name">AliDNS</string>
+    <string name="dns_server_alidns_desc">223.5.5.5 - Alibaba public resolver with low latency in mainland China</string>
+    <string name="dns_server_dnspod_name">DNSPod</string>
+    <string name="dns_server_dnspod_desc">119.29.29.29 - Tencent public resolver with low latency in mainland China</string>
+    <string name="dns_server_114_name">114DNS</string>
+    <string name="dns_server_114_desc">114.114.114.114 - Long-running public resolver popular in mainland China</string>
+    <string name="dns_server_custom_name">Custom</string>
+    <string name="dns_server_custom_desc">%1$s</string>
+
+    <string name="dns_type_a_desc">Maps a hostname to an IPv4 address (32-bit). This is the most common record type used to resolve domain names to IP addresses.</string>
+    <string name="dns_type_aaaa_desc">Maps a hostname to an IPv6 address (128-bit). Used for modern dual-stack networks that support IPv6 connectivity.</string>
+    <string name="dns_type_mx_desc">Mail Exchange - specifies mail servers responsible for accepting email for the domain, along with a priority value (lower = higher priority).</string>
+    <string name="dns_type_txt_desc">Text record - stores arbitrary human-readable or machine-readable text. Commonly used for SPF (email authentication), DKIM keys, DMARC policies, and domain verification.</string>
+    <string name="dns_type_cname_desc">Canonical Name - creates an alias from one hostname to another. The resolver will follow the chain until it finds an A or AAAA record.</string>
+    <string name="dns_type_ns_desc">Name Server - delegates a DNS zone to the given authoritative name servers. These servers are responsible for all records within the zone.</string>
+    <string name="dns_type_soa_desc">Start of Authority - provides administrative info about the DNS zone: primary name server, responsible email, serial number, and refresh/retry/expiry timers.</string>
+    <string name="dns_type_ptr_desc">Pointer - used for reverse DNS lookups to map an IP address back to a hostname. Query format: last-octet.third-octet.second-octet.first-octet.in-addr.arpa</string>
+    <string name="dns_type_srv_desc">Service - specifies the host and port for specific services (e.g. SIP, XMPP). Contains priority, weight, port, and target hostname.</string>
+    <string name="dns_type_caa_desc">Certification Authority Authorization - controls which certificate authorities are permitted to issue SSL/TLS certificates for the domain.</string>
+
+    <string name="dns_via_server">via %1$s</string>
+    <string name="dns_ttl_value">TTL %1$s</string>
+    <string name="dns_soa_primary_ns">Primary NS</string>
+    <string name="dns_soa_responsible">Responsible</string>
+    <string name="dns_soa_serial">Serial</string>
+    <string name="dns_soa_refresh">Refresh</string>
+    <string name="dns_soa_retry">Retry</string>
+    <string name="dns_soa_expire">Expire</string>
+    <string name="dns_soa_min_ttl">Min TTL</string>
+    <string name="dns_field_label_format">%1$s:</string>
+
+    <string name="wifi_sort_signal">Signal</string>
+    <string name="wifi_sort_name">Name</string>
+    <string name="wifi_sort_channel">Channel</string>
+    <string name="wifi_band_format">%1$s GHz</string>
+
+    <string name="ping_err_ttl_exceeded">TTL exceeded</string>
+    <string name="ping_err_connection_refused">Connection refused</string>
+    <string name="ping_err_connection_refused_from">Connection refused from %1$s</string>
+
+    <!-- UI error message mapping (see app/ui/LocalizedLabels.kt) -->
+    <string name="error_no_network">No network connection</string>
+    <string name="error_unknown">Unknown error</string>
+    <string name="error_scan_failed">Scan failed: %1$s</string>
+    <string name="ping_error_failed">Ping failed</string>
+    <string name="ping_error_no_response">No response received from %1$s</string>
+    <string name="traceroute_error_failed">Traceroute failed</string>
+    <string name="traceroute_error_no_route">No route found to %1$s</string>
+    <string name="mdns_error_discovery_failed">Discovery failed</string>
+    <string name="httprobe_error_request_failed">Request failed: %1$s</string>
+    <string name="httprobe_error_unknown">Unknown request error</string>
+    <string name="tls_error_inspection_failed">TLS inspection failed: %1$s</string>
+    <string name="tls_error_unknown">Unknown TLS inspection error</string>
+    <string name="topology_status_starting">Starting…</string>
+
+    <string name="placeholder_coming_soon">Coming Soon</string>
+    <string name="placeholder_planned_features">Planned features</string>
+
+    <string name="topology_snmp_config">SNMP Configuration</string>
+    <string name="topology_idle_seed_hint">Enter a seed IP and configure SNMP settings above</string>
+    <string name="topology_error_title">Discovery Failed</string>
+    <string name="topology_no_nodes">No nodes discovered yet</string>
+    <string name="topology_snmp_unreachable">SNMP not reachable</string>
+    <string name="topology_vendor_model">Vendor / Model</string>
+    <string name="topology_unknown">Unknown</string>
+    <string name="topology_firmware">Firmware</string>
+    <string name="topology_location">Location</string>
+    <string name="topology_uptime">Uptime</string>
 
 </resources>

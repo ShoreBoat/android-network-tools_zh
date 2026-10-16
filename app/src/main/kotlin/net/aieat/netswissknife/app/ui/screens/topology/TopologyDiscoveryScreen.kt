@@ -34,6 +34,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import net.aieat.netswissknife.app.R
 import net.aieat.netswissknife.app.ui.components.HeroTitleText
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.RecentHostsRow
 import net.aieat.netswissknife.app.ui.theme.AppMotion
 import net.aieat.netswissknife.app.ui.theme.AppShapes
@@ -200,7 +201,7 @@ private fun TopologyScreenContent(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = "SNMP Configuration",
+                            text = stringResource(R.string.topology_snmp_config),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -495,7 +496,7 @@ private fun TopologyScreenContent(
                         }
                         is TopologyUiState.Failure -> {
                             ErrorContent(
-                                message = state.message,
+                                message = localizedUiError(state.message),
                                 onRetry = onReset
                             )
                         }
@@ -627,7 +628,7 @@ private fun IdleContent() {
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "Enter a seed IP and configure SNMP settings above",
+            text = stringResource(R.string.topology_idle_seed_hint),
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -664,7 +665,7 @@ private fun ErrorContent(message: String, onRetry: () -> Unit) {
                 )
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(
-                    text = "Discovery Failed",
+                    text = stringResource(R.string.topology_error_title),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onErrorContainer
@@ -888,7 +889,7 @@ private fun TopologyCanvas(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "No nodes discovered yet",
+                    text = stringResource(R.string.topology_no_nodes),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -984,16 +985,19 @@ private fun NodeDetailSheet(
 
             item {
                 SectionCard(title = stringResource(R.string.topology_node_detail_system)) {
-                    DetailRow("Vendor / Model", "${node.vendor ?: "Unknown"} ${node.model ?: ""}".trim())
+                    DetailRow(
+                        stringResource(R.string.topology_vendor_model),
+                        "${node.vendor ?: stringResource(R.string.topology_unknown)} ${node.model ?: ""}".trim()
+                    )
                     val fw = node.firmwareVersion
                     val loc = node.sysLocation
                     val uptime = node.uptimeHuman
-                    if (fw != null) DetailRow("Firmware", fw)
-                    if (loc != null) DetailRow("Location", loc)
-                    if (uptime != null) DetailRow("Uptime", uptime)
+                    if (fw != null) DetailRow(stringResource(R.string.topology_firmware), fw)
+                    if (loc != null) DetailRow(stringResource(R.string.topology_location), loc)
+                    if (uptime != null) DetailRow(stringResource(R.string.topology_uptime), uptime)
                     if (!node.snmpReachable) {
                         Text(
-                            text = "SNMP not reachable",
+                            text = stringResource(R.string.topology_snmp_unreachable),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.error
                         )

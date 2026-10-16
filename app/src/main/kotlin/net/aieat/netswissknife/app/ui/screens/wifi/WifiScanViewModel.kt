@@ -104,8 +104,8 @@ sealed interface WifiScanUiState {
     data class Error(val message: String) : WifiScanUiState
 }
 
-enum class ApSortOrder(val label: String) {
-    SIGNAL("Signal"), SSID("Name"), CHANNEL("Channel")
+enum class ApSortOrder(@StringRes val labelRes: Int) {
+    SIGNAL(R.string.wifi_sort_signal), SSID(R.string.wifi_sort_name), CHANNEL(R.string.wifi_sort_channel)
 }
 
 data class ApDisappearedEvent(@StringRes val messageResId: Int = R.string.wifi_ap_disappeared)

@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.SmartToy
@@ -43,10 +44,12 @@ import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
+import android.app.Activity
 import android.os.Build
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
@@ -70,6 +73,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import net.aieat.netswissknife.app.BuildConfig
 import net.aieat.netswissknife.app.R
+import net.aieat.netswissknife.app.i18n.AppLanguage
 import net.aieat.netswissknife.app.ui.components.ToolHeroHeader
 import net.aieat.netswissknife.app.ui.screens.wifi.WifiRefreshIntervalPicker
 import net.aieat.netswissknife.app.ui.theme.AppMotion
@@ -96,7 +100,7 @@ fun SettingsScreen(
     var visibleSections by remember { mutableIntStateOf(0) }
     LaunchedEffect(visible) {
         if (visible) {
-            repeat(8) { delay(60L); visibleSections++ }
+            repeat(9) { delay(60L); visibleSections++ }
         }
     }
 
@@ -122,6 +126,9 @@ fun SettingsScreen(
                 )
             }
             AnimatedVisibility(visible = visibleSections >= 2, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+                LanguageSection()
+            }
+            AnimatedVisibility(visible = visibleSections >= 3, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 DefaultsSection(
                     pingCount = defaultPingCount,
                     timeoutMs = defaultTimeoutMs,
@@ -133,19 +140,19 @@ fun SettingsScreen(
                     onWifiRefreshIntervalChange = viewModel::setWifiRefreshInterval
                 )
             }
-            AnimatedVisibility(visible = visibleSections >= 3, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+            AnimatedVisibility(visible = visibleSections >= 4, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 DataSection(onClearRecents = viewModel::clearAllRecentHosts)
             }
-            AnimatedVisibility(visible = visibleSections >= 4, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+            AnimatedVisibility(visible = visibleSections >= 5, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 OnboardingResetSection(onReset = viewModel::resetOnboarding)
             }
-            AnimatedVisibility(visible = visibleSections >= 5, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+            AnimatedVisibility(visible = visibleSections >= 6, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 AboutSection()
             }
-            AnimatedVisibility(visible = visibleSections >= 6, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+            AnimatedVisibility(visible = visibleSections >= 7, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 AttributionsSection()
             }
-            AnimatedVisibility(visible = visibleSections >= 7, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
+            AnimatedVisibility(visible = visibleSections >= 8, enter = fadeIn(AppMotion.enter(250)) + slideInVertically(AppMotion.enter(250)) { it / 3 }) {
                 LicensesSection()
             }
             Spacer(Modifier.height(8.dp))
@@ -175,6 +182,54 @@ private fun SettingsHeader(onBack: () -> Unit) {
             }
         },
     )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun LanguageSection() {
+    // 二开 addition: per-app language. Re-read on every recomposition-triggering
+    // recreation because the platform (API 33+) is the source of truth there.
+    val context = LocalContext.current
+    var selected by remember { mutableStateOf(AppLanguage.current(context)) }
+
+    SectionHeader(Icons.Default.Translate, stringResource(R.string.settings_language_label))
+
+    ElevatedCard(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(
+                text = stringResource(R.string.settings_language_subtitle),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            val options = listOf(AppLanguage.SYSTEM, AppLanguage.CHINESE, AppLanguage.ENGLISH)
+            val labels = listOf(
+                stringResource(R.string.settings_language_system),
+                stringResource(R.string.settings_language_chinese),
+                stringResource(R.string.settings_language_english),
+            )
+            SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+                options.forEachIndexed { index, option ->
+                    SegmentedButton(
+                        selected = selected == option,
+                        onClick = {
+                            if (option != selected) {
+                                selected = option
+                                AppLanguage.set(context, option)
+                                // API 33+ recreates the app itself when the locale changes;
+                                // older releases need an explicit nudge to re-read resources.
+                                if (!AppLanguage.isPlatformManaged) {
+                                    (context as? Activity)?.recreate()
+                                }
+                            }
+                        },
+                        shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size)
+                    ) {
+                        Text(labels[index])
+                    }
+                }
+            }
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

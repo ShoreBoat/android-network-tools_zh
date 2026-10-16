@@ -75,6 +75,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import net.aieat.netswissknife.app.ui.components.ToolHeroHeader
+import net.aieat.netswissknife.app.ui.localizedUiError
 import net.aieat.netswissknife.app.ui.components.ToolErrorCard
 import net.aieat.netswissknife.app.ui.components.hapticAction
 import net.aieat.netswissknife.app.ui.theme.AppMotion
@@ -373,7 +374,7 @@ private fun TlsLoadingContent() {
 private fun TlsErrorContent(message: String, onRetry: () -> Unit) {
     ToolErrorCard(
         title = stringResource(R.string.tls_error_title),
-        message = message,
+        message = localizedUiError(message),
     ) {
         TextButton(onClick = onRetry) {
             Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(16.dp))

@@ -71,8 +71,8 @@ class DnsServerTest {
     inner class Presets {
 
         @Test
-        fun `presets contains exactly five entries`() {
-            assertEquals(5, DnsServer.presets.size)
+        fun `presets contains exactly eight entries`() {
+            assertEquals(8, DnsServer.presets.size)
         }
 
         @Test
@@ -98,6 +98,20 @@ class DnsServerTest {
         @Test
         fun `presets includes Quad9`() {
             assertTrue(DnsServer.presets.any { it is DnsServer.Quad9 })
+        }
+
+        @Test
+        fun `presets includes the mainland-China resolvers`() {
+            assertTrue(DnsServer.presets.any { it is DnsServer.AliDns })
+            assertTrue(DnsServer.presets.any { it is DnsServer.Dnspod })
+            assertTrue(DnsServer.presets.any { it is DnsServer.Dns114 })
+        }
+
+        @Test
+        fun `mainland-China resolvers use their well-known addresses`() {
+            assertEquals("223.5.5.5", DnsServer.AliDns.PRIMARY)
+            assertEquals("119.29.29.29", DnsServer.Dnspod.PRIMARY)
+            assertEquals("114.114.114.114", DnsServer.Dns114.PRIMARY)
         }
 
         @Test
