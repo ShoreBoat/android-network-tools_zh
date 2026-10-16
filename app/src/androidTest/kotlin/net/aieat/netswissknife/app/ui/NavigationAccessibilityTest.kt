@@ -54,15 +54,15 @@ class NavigationAccessibilityTest {
         NavRoutes.allTools.forEach { tool ->
             composeRule
                 .onNodeWithTag(HomeScreenTestTags.TOOL_GRID)
-                .performScrollToNode(hasText(tool.label))
+                .performScrollToNode(hasText(context.getString(tool.labelRes)))
             composeRule
-                .onNodeWithText(tool.label)
+                .onNodeWithText(context.getString(tool.labelRes))
                 .assertIsDisplayed()
                 .assertHasClickAction()
                 .assert(hasButtonRole())
         }
 
-        composeRule.onNodeWithText(NavRoutes.allTools.last().label).performClick()
+        composeRule.onNodeWithText(context.getString(NavRoutes.allTools.last().labelRes)).performClick()
         assertEquals(NavRoutes.allTools.last().route, destination)
     }
 
@@ -100,9 +100,9 @@ class NavigationAccessibilityTest {
         val toolList = composeRule.onNodeWithTag(MoreToolsSheetTestTags.TOOL_LIST)
 
         NavRoutes.allTools.forEach { tool ->
-            composeRule.onNodeWithText(tool.label).performScrollTo()
+            composeRule.onNodeWithText(context.getString(tool.labelRes)).performScrollTo()
             composeRule
-                .onNodeWithText(tool.label)
+                .onNodeWithText(context.getString(tool.labelRes))
                 .assertIsDisplayed()
                 .assertHasClickAction()
                 .assert(hasButtonRole())

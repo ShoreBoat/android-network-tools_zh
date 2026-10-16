@@ -12,6 +12,53 @@
     <string name="nav_home">Home</string>
     <string name="nav_more">More</string>
 
+    <!-- Tool names & one-line descriptions (Home grid, More sheet, bottom-nav short labels) -->
+    <string name="tool_ping_label">Ping</string>
+    <string name="tool_ping_short">Ping</string>
+    <string name="tool_ping_desc">Reachability and round-trip latency</string>
+    <string name="tool_traceroute_label">Traceroute</string>
+    <string name="tool_traceroute_short">Trace</string>
+    <string name="tool_traceroute_desc">Network path hop analysis</string>
+    <string name="tool_ports_label">Port Scanner</string>
+    <string name="tool_ports_short">Ports</string>
+    <string name="tool_ports_desc">TCP port reachability</string>
+    <string name="tool_lan_label">LAN Scanner</string>
+    <string name="tool_lan_short">LAN</string>
+    <string name="tool_lan_desc">Local device discovery</string>
+    <string name="tool_dns_label">DNS Lookup</string>
+    <string name="tool_dns_short">DNS</string>
+    <string name="tool_dns_desc">Resolve hostnames &amp; records</string>
+    <string name="tool_wifi_label">Wi-Fi Scanner</string>
+    <string name="tool_wifi_short">Wi-Fi</string>
+    <string name="tool_wifi_desc">Scan channels &amp; access points</string>
+    <string name="tool_topology_label">Network Topology</string>
+    <string name="tool_topology_short">Topology</string>
+    <string name="tool_topology_desc">SNMP switch &amp; neighbour discovery</string>
+    <string name="tool_tls_label">TLS Inspector</string>
+    <string name="tool_tls_short">TLS</string>
+    <string name="tool_tls_desc">SSL/TLS certificate chain inspector</string>
+    <string name="tool_whois_label">WHOIS Lookup</string>
+    <string name="tool_whois_short">WHOIS</string>
+    <string name="tool_whois_desc">Domain and IP registration lookup</string>
+    <string name="tool_httprobe_label">HTTP Probe</string>
+    <string name="tool_httprobe_short">HTTP</string>
+    <string name="tool_httprobe_desc">HTTP/HTTPS request tester with security header analysis</string>
+    <string name="tool_subnet_label">Subnet Calc</string>
+    <string name="tool_subnet_short">Subnet</string>
+    <string name="tool_subnet_desc">IPv4 subnet calculator with binary breakdown and notation conversion</string>
+    <string name="tool_mdns_label">mDNS Browser</string>
+    <string name="tool_mdns_short">mDNS</string>
+    <string name="tool_mdns_desc">Discover LAN services via multicast DNS</string>
+    <string name="tool_speedtest_label">Speed Test</string>
+    <string name="tool_speedtest_short">Speed</string>
+    <string name="tool_speedtest_desc">Download, upload speed and latency via Cloudflare</string>
+    <string name="tool_wol_label">Wake-on-LAN</string>
+    <string name="tool_wol_short">WOL</string>
+    <string name="tool_wol_desc">Wake sleeping devices with a magic packet</string>
+
+    <!-- Generic tool help sheet -->
+    <string name="help_sheet_how_to_use">How to use</string>
+
     <!-- Generic action content descriptions (used on standalone icon-only buttons) -->
     <string name="action_expand">Expand</string>
     <string name="action_collapse">Collapse</string>
@@ -283,6 +330,17 @@
     <string name="crash_copied">Crash report copied to clipboard</string>
     <string name="crash_share_subject">Net Swiss Knife – Crash Report</string>
     <string name="crash_share_title">Share crash report via…</string>
+    <string name="crash_no_stack_trace">No stack trace</string>
+    <string name="crash_unknown_exception">UnknownException</string>
+    <string name="crash_unknown_thread">unknown</string>
+    <string name="crash_no_message">No message</string>
+    <string name="crash_clip_label">Crash Report</string>
+    <string name="crash_report_header">Net Swiss Knife Crash Report</string>
+    <string name="crash_report_time">Time</string>
+    <string name="crash_report_thread">Thread</string>
+    <string name="crash_report_exception">Exception</string>
+    <string name="crash_report_message">Message</string>
+    <string name="crash_report_stack_trace">Stack Trace</string>
 
     <!-- Wi-Fi Scanner Screen -->
     <string name="wifi_screen_title">Wi-Fi Scanner</string>
@@ -1162,6 +1220,10 @@
     <!-- Settings: dynamic colour -->
     <string name="settings_dynamic_color_label">Material You dynamic colour</string>
     <string name="settings_dynamic_color_subtitle">Use wallpaper-based colours (Android 12+)</string>
+
+    <!-- Settings – Language (per-app locale) -->
+    <string name="settings_language_label">App language</string>
+    <string name="settings_language_subtitle">Choose the language used by this app</string>
 
     <!-- HTTP Probe security ratings -->
     <string name="security_rating_pass">Pass</string>

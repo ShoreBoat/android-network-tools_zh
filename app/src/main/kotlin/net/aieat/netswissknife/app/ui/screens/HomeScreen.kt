@@ -288,12 +288,12 @@ private fun AnimatedToolCard(tool: ToolInfo, delayMs: Int, skipEntrance: Boolean
             }
 
             Text(
-                text  = tool.label,
+                text  = stringResource(tool.labelRes),
                 style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold)
             )
 
             Text(
-                text  = tool.description,
+                text  = stringResource(tool.descriptionRes),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

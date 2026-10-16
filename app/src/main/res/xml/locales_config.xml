@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Locales the app ships translations for. Android 13+ surfaces these in
+  Settings → Apps → NetSwiss → Language, and the system only advertises a
+  per-app language picker when this file lists more than one locale.
+-->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="en" />
+    <locale android:name="zh-CN" />
+</locale-config>

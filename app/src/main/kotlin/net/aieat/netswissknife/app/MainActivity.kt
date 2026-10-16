@@ -164,7 +164,7 @@ private fun NavigationSuiteScope.appNavigationSuiteItems(
             selected = currentRoute == tool.route,
             onClick  = { onNavigate(tool.route) },
             icon  = { Icon(tool.icon, contentDescription = null) },
-            label = { Text(tool.shortLabel) }
+            label = { Text(stringResource(tool.shortLabelRes)) }
         )
     }
 

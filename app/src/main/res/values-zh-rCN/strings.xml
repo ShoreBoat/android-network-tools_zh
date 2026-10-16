@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Simplified Chinese (zh-CN) translations.
+    Generated for the Net Swiss Knife 二开 (custom fork) build.
+
+    Maintenance: keep the resource names and the %%1$s / %%2$d placeholders
+    in sync with values/strings.xml — the build fails on a mismatch.
+-->
+<resources>
+    <string name="app_name">NetSwiss</string>
+    <string name="app_name_full">Net Swiss Knife</string>
+
+    <!-- 首页 -->
+    <string name="home_subtitle">一站式 Android 网络工具箱</string>
+    <string name="home_all_tools">全部工具</string>
+    <string name="home_tools_scroll_hint">滚动查看更多工具</string>
+
+    <!-- 底部导航 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_more">更多</string>
+
+    <!-- 通用操作内容描述（用于独立的仅图标按钮） -->
+    <string name="action_expand">展开</string>
+    <string name="action_collapse">收起</string>
+    <string name="action_show_password">显示密码</string>
+    <string name="action_hide_password">隐藏密码</string>
+
+    <!-- 更多工具面板 -->
+    <string name="more_sheet_title">全部工具</string>
+    <plurals name="more_sheet_subtitle">
+        <item quantity="one">最多可将 %1$d 个工具固定到导航栏</item>
+        <item quantity="other">最多可将 %1$d 个工具固定到导航栏</item>
+    </plurals>
+    <string name="more_pin_description">固定 %1$s</string>
+    <string name="more_unpin_description">取消固定 %1$s</string>
+    <string name="more_section_diagnostics">诊断</string>
+    <string name="more_section_wifi_lan">Wi-Fi 与局域网</string>
+    <string name="more_section_security">安全</string>
+    <string name="more_section_utilities">实用工具</string>
+    <plurals name="more_pin_limit_reached">
+        <item quantity="one">最多固定 %1$d 个工具，请先取消固定一个</item>
+        <item quantity="other">最多固定 %1$d 个工具，请先取消固定一个</item>
+    </plurals>
+
+    <!-- DNS 页面 -->
+    <string name="dns_screen_title">DNS 查询</string>
+    <string name="dns_screen_subtitle">查询任意域名的 DNS 记录</string>
+
+    <!-- DNS 输入 -->
+    <string name="dns_domain_label">域名或 IP 地址</string>
+    <string name="dns_domain_placeholder">例如 example.com 或 8.8.8.8</string>
+    <string name="dns_record_type_label">记录类型</string>
+    <string name="dns_record_types_scroll_hint">更多记录类型，请横向滑动</string>
+    <string name="dns_server_label">DNS 服务器</string>
+    <string name="dns_server_custom">自定义服务器…</string>
+    <string name="dns_custom_server_placeholder">例如 192.168.1.1</string>
+    <string name="dns_lookup_button">查询</string>
+    <string name="dns_looking_up">正在查询…</string>
+    <string name="clear">清空</string>
+    <string name="error_no_details">没有提供更多详细信息。</string>
+    <string name="action_back">返回</string>
+
+    <!-- DNS 状态 -->
+    <string name="dns_idle_title">输入要查询的域名</string>
+    <string name="dns_idle_subtitle">支持 A、AAAA、MX、TXT、CNAME、NS、SOA、PTR 等类型</string>
+    <string name="dns_querying">正在查询 DNS…</string>
+    <string name="dns_querying_subtitle">正在向 DNS 服务器发送查询</string>
+    <string name="dns_error_title">查询失败</string>
+    <string name="dns_retry">重试</string>
+    <string name="dns_use_cloudflare">使用 Cloudflare</string>
+
+    <!-- DNS 结果 -->
+    <string name="dns_record_singular">条记录</string>
+    <string name="dns_record_plural">条记录</string>
+    <string name="dns_ms">ms</string>
+    <string name="dns_copy_value">复制值</string>
+    <string name="dns_copy_raw">复制原始响应</string>
+    <string name="dns_raw_response">原始 DNS 响应</string>
+    <string name="dns_no_records_title">未找到记录</string>
+    <string name="dns_no_records_subtitle">未找到 %1$s 记录：%2$s</string>
+    <string name="dns_rcode">RCODE：%1$s</string>
+    <string name="dns_flags">标志：%1$s</string>
+    <string name="dns_server_used">使用的服务器：%1$s</string>
+    <string name="dns_private_notice">Private DNS 已启用%1$s。普通 DNS 查询可能由设备以不同方式处理。</string>
+    <string name="dns_authority_section">权威记录</string>
+    <string name="dns_additional_section">附加记录</string>
+
+    <!-- Ping 页面 -->
+    <string name="ping_screen_title">Ping</string>
+    <string name="ping_screen_subtitle">测量到任意主机的往返时延与丢包率</string>
+
+    <!-- Ping 输入 -->
+    <string name="ping_host_label">主机或 IP 地址</string>
+    <string name="ping_host_placeholder">例如 google.com 或 8.8.8.8</string>
+    <string name="ping_count_label">次数</string>
+    <string name="ping_timeout_label">超时（秒）</string>
+    <string name="ping_advanced_options">高级选项</string>
+    <string name="ping_payload_label">负载大小：%1$d 字节</string>
+    <string name="ping_ttl_label">TTL：%1$d</string>
+    <string name="ping_interval_label">间隔：%1$d ms</string>
+    <string name="ping_start_button">开始 Ping</string>
+    <string name="ping_stop_button">停止</string>
+    <string name="ping_retry">重试</string>
+
+    <!-- Ping 连续模式 -->
+    <string name="ping_continuous_label">连续</string>
+    <string name="ping_pings_sent">已发送 Ping：%1$d</string>
+    <string name="ping_continuous_running_title">正在持续 Ping…</string>
+
+    <!-- Ping 状态 -->
+    <string name="ping_idle_title">输入要 Ping 的主机</string>
+    <string name="ping_idle_subtitle">支持主机名和 IPv4 地址</string>
+    <string name="ping_running_title">正在 Ping…</string>
+    <string name="ping_error_title">Ping 失败</string>
+
+    <!-- Ping 结果 -->
+    <string name="ping_result_header">Ping 结果</string>
+    <string name="ping_showing_recent">显示最近 %1$d 次 Ping（共 %2$d 次）</string>
+    <string name="ping_stats_header">统计</string>
+    <string name="ping_packets_sent">已发送</string>
+    <string name="ping_packets_received">已接收</string>
+    <string name="ping_packet_loss">丢包率</string>
+    <string name="ping_rtt_min">最小</string>
+    <string name="ping_rtt_avg">平均</string>
+    <string name="ping_rtt_max">最大</string>
+    <string name="ping_rtt_jitter">抖动</string>
+    <string name="ping_ms_suffix">ms</string>
+    <string name="ping_timeout_label_result">超时</string>
+    <string name="ping_unreachable_label_result">目标不可达</string>
+    <string name="ping_error_label_result">错误</string>
+    <string name="ping_raw_output">原始输出</string>
+    <string name="ping_copy_raw">复制原始输出</string>
+    <string name="ping_copy_csv">复制为 CSV</string>
+    <string name="ping_chart_title">RTT 图表</string>
+    <string name="ping_progress_format">%1$d / %2$d</string>
+
+    <!-- 端口扫描页面 -->
+    <string name="ports_screen_title">端口扫描</string>
+    <string name="ports_screen_subtitle">探测 TCP 端口并识别正在运行的服务</string>
+
+    <!-- 端口扫描输入 -->
+    <string name="ports_host_label">主机或 IP 地址</string>
+    <string name="ports_host_placeholder">例如 example.com 或 192.168.1.1</string>
+    <string name="ports_preset_label">端口预设</string>
+    <string name="ports_start_port_label">起始端口</string>
+    <string name="ports_end_port_label">结束端口</string>
+    <string name="ports_range_error">1–65535</string>
+    <string name="ports_range_order_error">起始端口不能大于结束端口</string>
+    <plurals name="ports_range_count">
+        <item quantity="one">已选择 %1$d 个端口</item>
+        <item quantity="other">已选择 %1$d 个端口</item>
+    </plurals>
+    <string name="ports_timeout_label">超时（毫秒）</string>
+    <string name="ports_concurrency_label">并发数</string>
+    <string name="ports_concurrency_high_warning">并发数过高可能导致局域网中的设备过载</string>
+    <string name="ports_scan_button">扫描端口</string>
+    <string name="ports_stop_button">停止扫描</string>
+    <string name="ports_clear_button">清空</string>
+    <string name="ports_retry_button">重试</string>
+
+    <!-- 端口扫描状态 -->
+    <string name="ports_idle_title">输入要扫描的主机</string>
+    <string name="ports_idle_subtitle">支持主机名和 IPv4/IPv6 地址</string>
+    <string name="ports_scanning_title">正在扫描端口…</string>
+    <string name="ports_error_title">扫描失败</string>
+
+    <!-- 端口扫描结果 -->
+    <string name="ports_result_header">扫描结果</string>
+    <string name="ports_open_ports">开放</string>
+    <string name="ports_closed_ports">已关闭</string>
+    <string name="ports_filtered_ports">已过滤</string>
+    <string name="ports_total_scanned">已扫描</string>
+    <string name="ports_duration_label">耗时</string>
+    <string name="ports_host_label_result">主机</string>
+    <plurals name="ports_progress_format">
+        <item quantity="one">%1$d / %2$d 个端口</item>
+        <item quantity="other">%1$d / %2$d 个端口</item>
+    </plurals>
+    <string name="ports_ms_suffix">ms</string>
+    <string name="ports_no_open_ports">未发现开放端口</string>
+    <string name="ports_open_label">开放</string>
+    <string name="ports_closed_label">已关闭</string>
+    <string name="ports_filtered_label">已过滤</string>
+    <string name="ports_section_open">开放端口</string>
+    <string name="ports_section_all">全部结果</string>
+    <string name="ports_copy_report">复制报告</string>
+    <string name="ports_show_all">显示所有端口</string>
+    <string name="ports_show_open">仅显示开放端口</string>
+    <string name="ports_resolved_ip">解析 IP：%1$s</string>
+    <string name="ports_scan_duration">%1$d ms</string>
+
+    <!-- 局域网扫描页面 -->
+    <string name="lan_screen_title">局域网扫描</string>
+    <string name="lan_screen_subtitle">发现局域网中的设备</string>
+
+    <!-- 局域网扫描配置 -->
+    <string name="lan_config_title">扫描配置</string>
+    <string name="lan_subnet_label">子网（CIDR）</string>
+    <string name="lan_subnet_placeholder">例如 192.168.1.0/24</string>
+    <string name="lan_detect_subnet">检测当前子网</string>
+    <string name="lan_timeout_label">超时：%1$d ms</string>
+    <string name="lan_concurrency_label">并发数：%1$d</string>
+    <string name="lan_scan_button">扫描网络</string>
+    <string name="lan_stop_button">停止扫描</string>
+    <string name="lan_rescan_button">重新扫描</string>
+    <string name="lan_clear_button">清空</string>
+    <string name="lan_retry_button">重试</string>
+
+    <!-- 局域网扫描状态 -->
+    <string name="lan_idle_title">输入要扫描的子网</string>
+    <string name="lan_idle_subtitle">发现在线主机、MAC 地址、厂商和开放端口</string>
+    <string name="lan_scanning_title">正在扫描…</string>
+    <string name="lan_scan_complete_title">扫描完成</string>
+    <string name="lan_error_title">扫描失败</string>
+
+    <!-- 局域网扫描结果 -->
+    <string name="lan_progress_format">%1$d / %2$d</string>
+    <plurals name="lan_hosts_found_format">
+        <item quantity="one">目前已发现 %1$d 台主机</item>
+        <item quantity="other">目前已发现 %1$d 台主机</item>
+    </plurals>
+    <string name="lan_live_hosts_header">在线主机</string>
+    <string name="lan_hosts_header">已发现主机（%1$d）</string>
+    <string name="lan_empty_title">未发现主机</string>
+    <string name="lan_empty_body">该子网内没有设备响应。请检查网段范围，并尝试增大超时时间。</string>
+    <string name="lan_stat_scanned">已扫描</string>
+    <string name="lan_stat_alive">在线</string>
+    <string name="lan_stat_subnet">子网</string>
+    <string name="lan_duration_format">%1$d ms</string>
+    <string name="lan_ping_format">%1$d ms</string>
+    <string name="lan_unknown_device">未知设备</string>
+    <string name="lan_gateway_badge">GW</string>
+    <string name="lan_gateway_label">网关</string>
+
+    <!-- 局域网拓扑 -->
+    <string name="lan_topology_title">网络地图</string>
+    <string name="lan_more_devices">更多…</string>
+
+    <!-- 局域网主机详情 -->
+    <string name="lan_details_title">设备详情</string>
+    <string name="lan_detail_ip">IP 地址</string>
+    <string name="lan_detail_hostname">主机名</string>
+    <string name="lan_detail_mac">MAC 地址</string>
+    <string name="lan_detail_vendor">厂商</string>
+    <string name="lan_detail_ping">Ping</string>
+    <string name="lan_detail_role">角色</string>
+    <string name="lan_mac_unavailable_api29">Android 10 及以上不可用（ARP 受限）</string>
+    <string name="lan_action_scan_ports">扫描端口</string>
+    <string name="lan_discovery_icmp">ICMP</string>
+    <string name="lan_discovery_tcp_open">TCP 开放</string>
+    <string name="lan_discovery_tcp_refused">TCP 拒绝</string>
+    <string name="lan_discovery_netbios">NetBIOS</string>
+    <string name="lan_discovery_mdns">mDNS</string>
+    <string name="lan_discovery_rdns">rDNS</string>
+    <string name="lan_role_gateway">网关 / 路由器</string>
+    <string name="lan_role_device">网络设备</string>
+    <string name="lan_open_ports_title">开放端口（%1$d）</string>
+    <string name="lan_no_open_ports">未检测到</string>
+
+    <!-- 局域网搜索 / 筛选 -->
+    <string name="lan_search_placeholder">搜索 IP、主机名、厂商…</string>
+    <string name="lan_filter_all">全部</string>
+    <string name="lan_filter_gateway">网关</string>
+    <string name="lan_filter_has_ports">有开放端口</string>
+    <string name="lan_hosts_filtered_header">结果（%1$d / %2$d）</string>
+    <string name="lan_no_search_results">没有符合搜索条件的设备</string>
+
+    <!-- 调试日志界面 -->
+    <string name="debug_log_title">调试日志</string>
+    <string name="debug_log_subtitle">应用内部诊断和崩溃追踪信息</string>
+    <string name="debug_log_refresh">刷新</string>
+    <string name="debug_log_copy">复制</string>
+    <string name="debug_log_clear">清空</string>
+    <string name="debug_log_clear_confirm_title">清空所有日志？</string>
+    <string name="debug_log_clear_confirm_body">此操作将永久删除调试日志文件，且无法撤销。</string>
+    <string name="debug_log_cancel">取消</string>
+
+    <!-- 崩溃对话框 -->
+    <string name="crash_title">应用已崩溃</string>
+    <string name="crash_subtitle">出了点问题，下面的详情有助于诊断原因。</string>
+    <string name="crash_summary_header">崩溃摘要</string>
+    <string name="crash_stack_trace_header">堆栈跟踪</string>
+    <string name="crash_label_time">时间</string>
+    <string name="crash_label_thread">线程</string>
+    <string name="crash_label_exception">异常</string>
+    <string name="crash_label_message">消息</string>
+    <string name="crash_copy">复制</string>
+    <string name="crash_share">分享</string>
+    <string name="crash_restart">重启应用</string>
+    <string name="crash_copied">崩溃报告已复制到剪贴板</string>
+    <string name="crash_share_subject">Net Swiss Knife – 崩溃报告</string>
+    <string name="crash_share_title">通过以下方式分享崩溃报告…</string>
+
+    <!-- Wi-Fi 扫描界面 -->
+    <string name="wifi_screen_title">Wi-Fi 扫描</string>
+    <string name="wifi_scan_button">扫描</string>
+    <string name="wifi_no_permission_title">需要位置权限</string>
+    <string name="wifi_no_permission_body">Android 需要位置权限才能扫描附近的 Wi-Fi 网络。您的位置信息不会被发送到任何地方。</string>
+    <string name="wifi_grant_permission">授予权限</string>
+    <string name="wifi_location_disabled_title">位置服务已关闭</string>
+    <string name="wifi_location_disabled_body">需要启用位置服务，Android 才能读取 Wi-Fi 扫描结果。您的位置信息不会被记录或发送到任何地方。</string>
+    <string name="wifi_open_location_settings">打开位置设置</string>
+    <string name="wifi_disabled_title">Wi-Fi 已关闭</string>
+    <string name="wifi_disabled_body">请在设备设置中开启 Wi-Fi，然后重新扫描。</string>
+    <string name="wifi_not_supported_title">Wi-Fi 不可用</string>
+    <string name="wifi_not_supported_body">此设备没有 Wi-Fi 硬件。</string>
+    <string name="wifi_error_title">扫描失败</string>
+    <string name="wifi_retry">重试</string>
+    <string name="wifi_ap_disappeared">该网络已不在范围内</string>
+    <string name="wifi_value_unavailable">不可用</string>
+    <string name="wifi_sort_label">排序：</string>
+    <string name="wifi_refresh_interval_label">自动刷新间隔</string>
+    <string name="wifi_refresh_interval_off">关闭</string>
+    <string name="wifi_refresh_interval_15s">15 秒</string>
+    <string name="wifi_refresh_interval_30s">30 秒</string>
+    <string name="wifi_refresh_interval_60s">60 秒</string>
+    <plurals name="wifi_results_age">
+        <item quantity="one">%1$d 秒前更新</item>
+        <item quantity="other">%1$d 秒前更新</item>
+    </plurals>
+    <string name="wifi_results_age_unknown">无法获取结果更新时间</string>
+    <string name="wifi_scan_throttled">Android 限制了扫描频率</string>
+    <string name="wifi_connected_badge">已连接</string>
+    <string name="wifi_hidden_badge">隐藏</string>
+    <string name="wifi_detail_band">频段</string>
+    <string name="wifi_detail_channel">信道</string>
+    <string name="wifi_detail_width">带宽</string>
+    <string name="wifi_detail_standard">标准</string>
+    <string name="wifi_detail_max_speed">最大速率</string>
+    <string name="wifi_detail_vendor">厂商</string>
+    <string name="wifi_detail_security">安全</string>
+    <string name="wifi_detail_ip">IP 地址</string>
+    <string name="wifi_detail_ipv6">IPv6 地址</string>
+    <string name="wifi_detail_gateway">网关</string>
+    <string name="wifi_detail_dns">DNS 服务器</string>
+    <string name="wifi_detail_link_speed">链路速率</string>
+    <string name="wifi_detail_tx_speed">发送速率</string>
+    <string name="wifi_detail_rx_speed">接收速率</string>
+    <string name="wifi_detail_signal">信号</string>
+    <string name="wifi_connected_network_header">当前已连接</string>
+    <string name="wifi_rssi_dbm">%1$d dBm</string>
+    <string name="wifi_signal_quality_pct">%1$d%%</string>
+    <string name="wifi_network_info_header">网络信息</string>
+    <string name="wifi_live_connection_header">实时连接</string>
+    <string name="wifi_spectrum_title">频谱分析</string>
+    <string name="wifi_best_channel_title">最佳信道</string>
+    <string name="wifi_best_channel_body">2.4 GHz 上信道 %1$d 最不拥挤</string>
+    <plurals name="wifi_networks_count">
+        <item quantity="one">%1$d 个网络</item>
+        <item quantity="other">%1$d 个网络</item>
+    </plurals>
+    <string name="wifi_aps_count">%1$d 个 AP</string>
+
+    <!-- 路由追踪界面 -->
+    <string name="traceroute_screen_title">路由追踪</string>
+    <string name="traceroute_screen_subtitle">逐跳追踪到任意主机的网络路径</string>
+
+    <!-- 路由追踪输入 -->
+    <string name="traceroute_config_title">追踪配置</string>
+    <string name="traceroute_host_label">主机或 IP 地址</string>
+    <string name="traceroute_host_placeholder">例如 google.com 或 8.8.8.8</string>
+    <string name="traceroute_max_hops_label">最大跳数</string>
+    <string name="traceroute_timeout_label">每跳超时</string>
+    <string name="traceroute_probe_type_label">探测协议</string>
+    <string name="traceroute_probe_icmp">ICMP</string>
+    <string name="traceroute_probe_udp">UDP</string>
+    <string name="traceroute_probes_per_hop_label">每跳探测次数</string>
+    <string name="traceroute_mtu_discovery_label">MTU 发现（自动数据包大小）</string>
+    <string name="traceroute_packet_size_label">数据包大小</string>
+    <string name="traceroute_start_button">开始追踪</string>
+    <string name="traceroute_stop_button">停止</string>
+    <string name="traceroute_retry_button">重试</string>
+    <string name="traceroute_clear_button">清空</string>
+
+    <!-- 路由追踪状态 -->
+    <string name="traceroute_idle_title">输入要追踪的主机</string>
+    <string name="traceroute_idle_subtitle">支持主机名和 IPv4 地址，并显示每一跳的地理位置和全程统计。</string>
+    <string name="traceroute_running_title">正在追踪 %1$s…</string>
+    <plurals name="traceroute_running_subtitle">
+        <item quantity="one">已发现 %1$d 跳</item>
+        <item quantity="other">已发现 %1$d 跳</item>
+    </plurals>
+    <string name="traceroute_error_title">追踪失败</string>
+
+    <!-- 路由追踪结果 -->
+    <string name="traceroute_result_header">追踪结果</string>
+    <!-- 路由追踪全程统计 -->
+    <string name="traceroute_stats_title">全程分析</string>
+    <string name="traceroute_stats_geo_section">地理路径</string>
+    <string name="traceroute_stats_rtt_section">RTT 分析</string>
+    <string name="traceroute_stats_distance">距离</string>
+    <string name="traceroute_stats_countries">国家/地区</string>
+    <string name="traceroute_stats_isps">ISP 数量</string>
+    <string name="traceroute_stats_packet_speed">包速率</string>
+    <string name="traceroute_stats_packet_speed_value">约为光速的 %1$d%%</string>
+    <string name="traceroute_stats_avg_rtt">平均 RTT</string>
+    <string name="traceroute_stats_min_rtt">最快</string>
+    <string name="traceroute_stats_max_rtt">最慢</string>
+    <string name="traceroute_stats_timeout_rate">超时率</string>
+    <string name="traceroute_stats_hop_label">第 %1$d 跳</string>
+    <string name="traceroute_stats_country_path">路径：%1$s</string>
+    <string name="traceroute_stats_no_geo">未解析到公网 IP，无法提供地理统计</string>
+    <string name="traceroute_stats_light_speed_note">基于光纤中光速约 200 km/ms 估算</string>
+    <string name="traceroute_tab_hops">跳详情</string>
+    <string name="traceroute_tab_raw">原始输出</string>
+    <string name="traceroute_raw_title">原始追踪输出</string>
+    <string name="traceroute_stat_hops">跳数</string>
+    <string name="traceroute_stat_time">时间</string>
+    <string name="traceroute_stat_reached">已到达</string>
+    <string name="traceroute_stat_yes">是</string>
+    <string name="traceroute_stat_no">否</string>
+    <string name="traceroute_resolved_ip">解析 IP：%1$s</string>
+    <string name="traceroute_hop_timeout">无响应（超时）</string>
+    <string name="traceroute_hop_detail_ip">IP 地址</string>
+    <string name="traceroute_hop_detail_hostname">主机名</string>
+    <string name="traceroute_hop_detail_rtt">RTT</string>
+    <string name="traceroute_hop_detail_status">状态</string>
+    <string name="traceroute_hop_detail_status_success">已响应</string>
+    <string name="traceroute_hop_detail_status_timeout">超时</string>
+    <string name="traceroute_hop_detail_status_error">错误</string>
+    <string name="traceroute_hop_detail_location">位置</string>
+    <string name="traceroute_hop_detail_isp">ISP</string>
+    <string name="traceroute_hop_detail_asn">ASN</string>
+    <string name="traceroute_hop_detail_coordinates">坐标</string>
+
+    <!-- 网络拓扑发现界面 -->
+    <string name="topology_screen_title">网络拓扑</string>
+    <string name="topology_screen_subtitle">基于 SNMP 的交换机与邻居发现</string>
+
+    <string name="topology_target_ip_label">目标 IP（种子交换机/路由器）</string>
+    <string name="topology_snmp_version_label">SNMP 版本</string>
+    <string name="topology_community_label">团体字符串</string>
+    <string name="topology_v3_username_label">用户名</string>
+    <string name="topology_v3_auth_proto_label">认证协议</string>
+    <string name="topology_v3_auth_none">无</string>
+    <string name="topology_v3_auth_md5">MD5</string>
+    <string name="topology_v3_auth_sha1">SHA-1</string>
+    <string name="topology_v3_auth_sha256">SHA-256</string>
+    <string name="topology_v3_auth_sha512">SHA-512</string>
+    <string name="topology_v3_auth_password_label">认证密码</string>
+    <string name="topology_v3_priv_proto_label">加密协议</string>
+    <string name="topology_v3_priv_none">无</string>
+    <string name="topology_v3_priv_des">DES</string>
+    <string name="topology_v3_priv_aes128">AES-128</string>
+    <string name="topology_v3_priv_aes192">AES-192</string>
+    <string name="topology_v3_priv_aes256">AES-256</string>
+    <string name="topology_v3_priv_password_label">加密密码</string>
+    <string name="topology_v3_priv_requires_auth">启用加密前需要先配置认证协议。</string>
+    <string name="topology_max_hops_label">最大跳数：%1$d</string>
+    <string name="topology_discover_button">发现拓扑</string>
+    <string name="topology_cancel_button">取消/重置</string>
+    <string name="topology_idle_tagline">发现你的网络拓扑</string>
+    <plurals name="topology_scanning_badge">
+        <item quantity="one">正在扫描…已发现 %1$d 个节点</item>
+        <item quantity="other">正在扫描…已发现 %1$d 个节点</item>
+    </plurals>
+    <string name="topology_node_detail_system">系统</string>
+    <string name="topology_node_detail_interfaces">接口</string>
+    <string name="topology_node_detail_vlans">VLAN</string>
+    <string name="topology_node_detail_neighbours">邻居</string>
+    <string name="topology_error_retry">重试</string>
+    <string name="topology_fit_button_cd">使图形适应屏幕</string>
+    <string name="topology_vlan_label">%1$d：%2$s</string>
+
+    <!-- TLS 证书检测界面 -->
+    <string name="tls_screen_title">TLS 证书检测</string>
+    <string name="tls_screen_subtitle">SSL/TLS 证书链检测工具</string>
+
+    <!-- TLS 输入 -->
+    <string name="tls_host_label">主机或 IP 地址</string>
+    <string name="tls_host_placeholder">例如 example.com 或 192.168.1.1</string>
+    <string name="tls_port_label">端口（默认 443）</string>
+    <string name="tls_inspect_button">检测</string>
+    <string name="tls_inspecting">正在检测…</string>
+
+    <!-- TLS 状态 -->
+    <string name="tls_idle_title">输入要检测的主机</string>
+    <string name="tls_idle_subtitle">通过 TLS 连接并返回完整证书链，包括已过期或自签名的证书</string>
+    <string name="tls_error_title">检测失败</string>
+    <string name="tls_retry">重试</string>
+
+    <!-- TLS 连接卡片 -->
+    <string name="tls_connection_header">连接</string>
+    <string name="tls_trusted">受信任</string>
+    <string name="tls_untrusted">不受信任</string>
+    <string name="tls_host_port">主机/端口</string>
+    <string name="tls_version">TLS 版本</string>
+    <string name="tls_cipher_suite">密码套件</string>
+    <string name="tls_handshake_time">握手</string>
+    <string name="tls_ms_format">%1$d 毫秒</string>
+
+    <!-- TLS 证书标签 -->
+    <string name="tls_cert_leaf">叶证书</string>
+    <string name="tls_cert_intermediate">中间证书</string>
+    <string name="tls_cert_root">根证书</string>
+    <string name="tls_expand">展开证书</string>
+    <string name="tls_collapse">收起证书</string>
+
+    <!-- TLS 到期徽标 -->
+    <string name="tls_expired">已过期</string>
+    <plurals name="tls_days_left">
+        <item quantity="one">%1$d 天</item>
+        <item quantity="other">%1$d 天</item>
+    </plurals>
+
+    <!-- TLS 证书详情字段 -->
+    <string name="tls_subject_cn">主体 CN</string>
+    <string name="tls_subject_org">主体组织</string>
+    <string name="tls_issuer_cn">颁发者 CN</string>
+    <string name="tls_issuer_org">颁发者组织</string>
+    <string name="tls_valid_from">生效时间</string>
+    <string name="tls_valid_to">到期时间</string>
+    <string name="tls_self_signed">自签名</string>
+    <string name="tls_sans_label">主体备用名称</string>
+    <string name="tls_serial">序列号</string>
+    <string name="tls_sig_algo">签名算法</string>
+    <string name="tls_key_algo">公钥</string>
+    <string name="tls_key_algo_bits">%1$s %2$d 位</string>
+    <string name="tls_fingerprint_label">SHA-256 指纹</string>
+    <string name="tls_unknown_cn">（未知）</string>
+
+    <!-- WHOIS 查询界面 -->
+    <string name="whois_screen_title">WHOIS 查询</string>
+    <string name="whois_screen_subtitle">域名与 IP 注册信息查询</string>
+    <string name="whois_query_label">域名、IP 或 ASN</string>
+    <string name="whois_query_placeholder">例如 example.com、8.8.8.8、AS15169</string>
+    <string name="whois_lookup_button">查询</string>
+    <string name="whois_idle_title">输入要查询的域名或 IP</string>
+    <string name="whois_error_title">查询失败</string>
+    <string name="whois_retry">重试</string>
+    <string name="whois_relay_chain">查询链路</string>
+    <string name="whois_hop_latency_ms">%1$d 毫秒</string>
+    <string name="whois_querying_server">正在查询 %1$s…</string>
+    <string name="whois_raw_responses">WHOIS 原始响应</string>
+    <string name="whois_show_raw">显示原始响应</string>
+    <string name="whois_lifecycle">生命周期</string>
+    <string name="whois_registered">注册时间</string>
+    <string name="whois_updated">更新时间</string>
+    <string name="whois_expires">到期时间</string>
+    <string name="whois_domain_status">域名状态</string>
+    <string name="whois_name_servers">名称服务器</string>
+    <string name="whois_dnssec">DNSSEC</string>
+    <string name="whois_registrant">注册人</string>
+    <string name="whois_net_range">网络范围</string>
+    <string name="whois_org">组织</string>
+    <string name="whois_country">国家</string>
+    <string name="whois_example_chip_domain">域名</string>
+    <string name="whois_example_chip_ip">IP 地址</string>
+    <string name="whois_example_chip_asn">ASN</string>
+
+    <!-- HTTP 探测界面 -->
+    <string name="httprobe_screen_title">HTTP 探测</string>
+    <string name="httprobe_screen_subtitle">测试 HTTP/HTTPS 请求，提供完整的头部信息与安全分析</string>
+
+    <!-- HTTP 探测输入 -->
+    <string name="httprobe_url_label">URL</string>
+    <string name="httprobe_url_placeholder">例如 https://example.com/api</string>
+    <string name="httprobe_method_label">HTTP 方法</string>
+    <string name="httprobe_custom_headers_label">自定义请求头</string>
+    <string name="httprobe_add_header">添加请求头</string>
+    <string name="httprobe_remove_header">删除请求头</string>
+    <string name="httprobe_header_key">名称</string>
+    <string name="httprobe_header_value">值</string>
+    <string name="httprobe_body_label">请求体</string>
+    <string name="httprobe_body_placeholder">{"key": "value"}</string>
+    <string name="httprobe_follow_redirects_label">跟随重定向</string>
+    <string name="httprobe_follow_redirects_sub">自动跟随 HTTP 3xx 响应</string>
+    <string name="httprobe_send_button">发送请求</string>
+    <string name="httprobe_sending">正在发送…</string>
+
+    <!-- HTTP 探测状态 -->
+    <string name="httprobe_idle_title">输入要探测的 URL</string>
+    <string name="httprobe_idle_subtitle">支持 GET、POST、PUT、PATCH、DELETE、HEAD 和 OPTIONS 方法，并包含安全响应头分析。</string>
+    <string name="httprobe_error_title">请求失败</string>
+    <string name="httprobe_retry">重试</string>
+
+    <!-- HTTP 探测标签页 -->
+    <string name="httprobe_tab_overview">概览</string>
+    <string name="httprobe_tab_headers">头部</string>
+    <string name="httprobe_tab_body">正文</string>
+    <string name="httprobe_tab_security">安全</string>
+
+    <!-- HTTP 探测结果 -->
+    <string name="httprobe_response_time_label">响应时间</string>
+    <plurals name="httprobe_redirects_label">
+        <item quantity="one">%1$d 次重定向</item>
+        <item quantity="other">%1$d 次重定向</item>
+    </plurals>
+    <string name="httprobe_method_used">方法</string>
+    <string name="httprobe_final_url">最终 URL</string>
+    <string name="httprobe_response_size">响应体大小</string>
+    <string name="httprobe_content_type">Content-Type</string>
+    <string name="httprobe_redirect_chain">重定向链路</string>
+    <string name="httprobe_request_headers">请求头</string>
+    <string name="httprobe_response_headers">响应头</string>
+    <string name="httprobe_no_custom_headers">未发送自定义请求头</string>
+    <string name="httprobe_no_headers">无头部信息</string>
+    <string name="httprobe_response_body">响应正文</string>
+    <string name="httprobe_copy_body">复制</string>
+    <string name="httprobe_body_truncated">仅显示响应正文的前 %1$s</string>
+    <string name="httprobe_response_size_at_least">≥ %1$s</string>
+    <string name="httprobe_empty_body">正文为空（HEAD 请求或无内容）</string>
+
+    <!-- DNS 记录标签 -->
+    <string name="dns_ipv4_prefix">IPv4</string>
+    <string name="dns_ipv6_prefix">IPv6</string>
+    <string name="dns_mx_priority">优先级</string>
+    <string name="dns_mx_host">邮件服务器</string>
+    <string name="dns_srv_priority">优先级</string>
+    <string name="dns_srv_weight">权重</string>
+    <string name="dns_srv_port">端口</string>
+    <string name="dns_srv_target">目标</string>
+
+    <!-- 子网计算器 -->
+    <string name="subnet_screen_title">子网计算器</string>
+    <string name="subnet_screen_subtitle">IPv4 CIDR、掩码、通配符 &amp; 二进制拆分</string>
+    <string name="subnet_input_label">网络/地址</string>
+    <string name="subnet_input_placeholder">例如 192.168.1.0/24</string>
+    <string name="subnet_calculate_button">计算</string>
+    <string name="subnet_idle_title">输入 IPv4 地址或网络</string>
+    <string name="subnet_idle_body">支持 CIDR（192.168.1.0/24）、点分十进制掩码（192.168.1.0/255.255.255.0）或直接输入 IP（默认按 /32 处理）。</string>
+    <string name="subnet_error_title">输入无效</string>
+    <string name="subnet_retry">重试</string>
+    <string name="subnet_overview_hosts">%1$s 个可用主机</string>
+    <string name="subnet_network_address">网络地址</string>
+    <string name="subnet_broadcast">广播地址</string>
+    <string name="subnet_first_host">第一个主机</string>
+    <string name="subnet_last_host">最后一个主机</string>
+    <string name="subnet_total_hosts">地址总数</string>
+    <string name="subnet_usable_hosts">可用主机数</string>
+    <string name="subnet_binary_breakdown">二进制拆分</string>
+    <plurals name="subnet_network_bits">
+        <item quantity="one">网络位：%1$d 位</item>
+        <item quantity="other">网络位：%1$d 位</item>
+    </plurals>
+    <plurals name="subnet_host_bits">
+        <item quantity="one">主机位：%1$d 位</item>
+        <item quantity="other">主机位：%1$d 位</item>
+    </plurals>
+    <string name="subnet_binary_ip">IP 地址</string>
+    <string name="subnet_binary_mask">子网掩码</string>
+    <string name="subnet_binary_network">网络地址</string>
+
+<!-- 切片 4 -->
+    <string name="subnet_notations_title">等价表示法</string>
+    <string name="subnet_notation_cidr">CIDR</string>
+    <string name="subnet_notation_mask">点分十进制掩码</string>
+    <string name="subnet_notation_wildcard">通配符掩码</string>
+    <string name="subnet_notation_hex">十六进制掩码</string>
+    <string name="subnet_notation_binary">二进制掩码</string>
+    <string name="subnet_properties_title">地址属性</string>
+    <string name="subnet_ip_class">IP 类别</string>
+    <string name="subnet_class_label">%1$s 类</string>
+    <string name="subnet_scope">范围</string>
+    <string name="subnet_scope_private">私有</string>
+    <string name="subnet_scope_public">公有</string>
+    <string name="subnet_prefix_bits">前缀位 / 主机位</string>
+    <string name="subnet_prefix_of_32">%1$d / 32</string>
+    <string name="subnet_host_bit_count">主机位</string>
+    <plurals name="subnet_bits_count">
+        <item quantity="one">%1$d 位</item>
+        <item quantity="other">%1$d 位</item>
+    </plurals>
+    <!-- 模式切换 -->
+    <string name="subnet_mode_cidr">CIDR / 掩码</string>
+    <string name="subnet_mode_range">IP 范围</string>
+    <!-- 范围模式输入 -->
+    <string name="subnet_range_idle_title">输入 IP 范围</string>
+    <string name="subnet_range_idle_body">输入你需要的起始和结束 IP 地址，计算器会找出能同时覆盖两者的最小子网。</string>
+    <string name="subnet_min_ip_label">最小 IP</string>
+    <string name="subnet_min_ip_placeholder">例如 10.0.70.1</string>
+    <string name="subnet_max_ip_label">最大 IP</string>
+    <string name="subnet_max_ip_placeholder">例如 10.0.71.254</string>
+    <string name="subnet_range_calculate_button">查找子网</string>
+    <!-- 对齐警告 -->
+    <string name="subnet_alignment_warning_title">IP 不在网络边界上</string>
+    <string name="subnet_alignment_warning_body">%1$s 不是 /%2$d 的有效网络地址。实际网络从 %3$s 开始。Azure 等云服务商要求子网定义中使用精确的网络地址。</string>
+    <!-- 提示 -->
+    <string name="tooltip_network_address">网络地址是子网中的第一个地址，其所有主机位均为 0。它标识子网本身，不能分配给任何设备。例如：在 192.168.1.0/24 中，网络地址是 192.168.1.0。</string>
+    <string name="tooltip_broadcast">广播地址是子网中的最后一个地址，其所有主机位均为 1。发送到该地址的数据包会送达子网内的每台设备。例如：在 192.168.1.0/24 中，广播地址是 192.168.1.255。</string>
+    <string name="tooltip_first_host">第一个可用 IP 地址——比网络地址大 1，是能分配给设备的最小地址。</string>
+    <string name="tooltip_last_host">最后一个可用 IP 地址——比广播地址小 1，是能分配给设备的最大地址。</string>
+    <string name="tooltip_usable_hosts">可分配给设备的地址数量。始终为 (2^主机位数 − 2)，因为网络地址和广播地址会被保留。</string>
+    <string name="tooltip_wildcard">通配符掩码是子网掩码按位取反的结果。置为 1 的位是「don\'t care」位。用于 ACL 和 OSPF 配置。</string>
+    <string name="tooltip_cidr">无类别域间路由（CIDR）记法将 IP 地址与前缀长度（网络位数）组合在一起。例如：192.168.1.0/24 表示 24 个网络位和 8 个主机位。</string>
+    <string name="tooltip_ip_class">CIDR 取代 IPv4 地址分类之前使用的旧式分类。A 类覆盖 0–127，B 类覆盖 128–191，C 类覆盖 192–223。D 类为组播，E 类为保留。</string>
+    <string name="tooltip_scope">地址是位于 RFC 1918 私有范围（10.x、172.16–31.x、192.168.x）内，还是可在互联网上公开路由。</string>
+
+    <!-- 设置界面 -->
+    <string name="settings_screen_title">设置</string>
+    <string name="settings_screen_subtitle">自定义主题和工具默认值</string>
+    <string name="settings_entry_label">设置</string>
+    <string name="settings_entry_subtitle">主题、默认设置和数据管理</string>
+
+    <!-- 设置 – 主题 -->
+    <string name="settings_theme_section">外观</string>
+    <string name="settings_theme_label">主题</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_theme_dark">深色</string>
+
+    <!-- 设置 – 默认值 -->
+    <string name="settings_defaults_section">工具默认设置</string>
+    <string name="settings_ping_count_label">默认 Ping 次数：%1$d</string>
+    <string name="settings_timeout_label">默认超时：%1$d ms</string>
+    <string name="settings_concurrency_label">默认并发数：%1$d</string>
+    <string name="settings_wifi_refresh_interval_label">Wi-Fi 自动刷新间隔</string>
+
+    <!-- 设置 – 数据 -->
+    <string name="settings_data_section">数据</string>
+    <string name="settings_clear_recents_label">清空最近主机</string>
+    <string name="settings_clear_recents_subtitle">移除所有工具中保存的最近主机记录。</string>
+    <string name="settings_clear_recents_button">清空所有最近主机</string>
+    <string name="settings_clear_recents_confirm_title">清空最近主机？</string>
+    <string name="settings_clear_recents_confirm_message">这将永久移除所有保存的最近主机记录。此操作无法撤销。</string>
+    <string name="settings_clear_recents_confirm_button">清空</string>
+
+    <!-- 设置 – 关于 -->
+    <string name="settings_about_section">关于</string>
+    <string name="settings_version_label">版本</string>
+    <string name="settings_source_code_label">源代码</string>
+    <string name="settings_source_code_url">github.com/AieatAssam/android-network-tools</string>
+
+    <!-- 设置 – 数据来源标注 -->
+    <string name="settings_attributions_section">数据来源标注</string>
+    <string name="settings_attribution_speedtest_title">网速测试：Cloudflare</string>
+    <string name="settings_attribution_speedtest_body">网速测试会连接 Cloudflare 位于 speed.cloudflare.com 的公共测速服务，以测量时延、下载和上传性能。它仅发送和接收合成的测量流量，不会上传你的主机名、IP 地址、DNS 结果、Wi-Fi 详情、扫描结果、文件或其他个人内容。Net Swiss Knife 是一款独立应用，与 Cloudflare, Inc. 无关联，也未获其赞助或认可。Cloudflare 和 Cloudflare 标志是 Cloudflare, Inc. 的商标。</string>
+
+    <!-- 设置 – 开源许可 -->
+    <string name="settings_licenses_section">开源许可</string>
+    <string name="settings_licenses_subtitle">本应用使用的第三方库</string>
+
+    <!-- 通用对话框 -->
+    <string name="cancel">取消</string>
+
+    <!-- 最近主机（所有工具共用） -->
+    <string name="recent_hosts_label">最近</string>
+    <string name="action_clear_recents">清空最近主机</string>
+    <string name="action_remove_recent">从最近记录中移除</string>
+
+    <!-- 分享操作 -->
+    <string name="action_share">分享结果</string>
+
+    <!-- 各工具的分享主题 -->
+    <string name="share_subject_ping">Ping – %1$s</string>
+    <string name="share_subject_traceroute">路由追踪 – %1$s</string>
+    <string name="share_subject_ports">端口扫描 – %1$s</string>
+    <string name="share_subject_tls">TLS – %1$s:%2$d</string>
+    <string name="share_subject_whois">WHOIS 查询 – %1$s</string>
+    <string name="share_subject_lan">局域网扫描 – %1$s</string>
+    <string name="share_subject_http">HTTP – %1$s</string>
+    <string name="share_subject_dns">DNS %1$s – %2$s</string>
+    <string name="share_subject_speedtest">网速测试 – %1$s</string>
+
+    <!-- mDNS 界面 -->
+    <string name="mdns_screen_title">mDNS 浏览</string>
+    <string name="mdns_screen_subtitle">通过组播 DNS 发现本地网络中的服务</string>
+    <string name="mdns_stat_found">已发现</string>
+    <string name="mdns_stat_elapsed">已用时</string>
+    <string name="mdns_idle_hint">点按「扫描」发现服务</string>
+    <string name="mdns_idle_body">可发现打印机、Chromecast、AirPlay、HomeKit 等设备</string>
+    <string name="mdns_scanning_hint">正在监听 mDNS 通告…</string>
+    <string name="mdns_scanning_inline_label">正在扫描…</string>
+    <string name="mdns_error_title">发现失败</string>
+    <string name="mdns_error_dismiss">忽略</string>
+    <string name="mdns_scan_button">扫描网络</string>
+    <string name="mdns_stop_button">停止</string>
+    <string name="mdns_clear_button">清空</string>
+    <string name="mdns_empty_title">未发现服务</string>
+    <string name="mdns_empty_body">没有 mDNS 服务响应。请确保设备处于同一网络后重试。</string>
+    <string name="mdns_txt_records_label">TXT 记录</string>
+
+    <!-- 新手引导 -->
+    <string name="onboarding_subtitle">你的全能 Android 网络工具箱</string>
+    <string name="onboarding_get_started">开始使用</string>
+    <string name="onboarding_dont_show_again">跳过</string>
+    <string name="onboarding_next">下一步</string>
+    <string name="onboarding_back">上一步</string>
+
+    <!-- 新手引导 – 第 1 页：欢迎 -->
+    <string name="onboarding_page1_title">欢迎使用 Net Swiss Knife</string>
+    <string name="onboarding_page1_body">诊断、保护和了解网络所需的一切，全都在这台设备上完成。无需账号，没有广告；除非某个工具明确需要发送数据（例如 DNS 或 WHOIS 查询），否则任何内容都不会离开你的手机。</string>
+
+    <!-- 新手引导 – 第 2 页：你能做什么（按使用场景而非工具名划分） -->
+    <string name="onboarding_page2_title">为任务挑选合适的工具</string>
+    <string name="onboarding_usecase_diagnostics_q">网络很慢或连不上？</string>
+    <string name="onboarding_usecase_diagnostics_a">诊断 - Ping、路由追踪、端口扫描、局域网扫描</string>
+    <string name="onboarding_usecase_wifi_q">该选择哪个 Wi-Fi 信道？</string>
+    <string name="onboarding_usecase_wifi_a">Wi-Fi 分析 - 扫描网络并可视化频谱</string>
+    <string name="onboarding_usecase_security_q">这个网站或连接安全吗？</string>
+    <string name="onboarding_usecase_security_a">安全工具 - TLS 证书、HTTP 响应头、WHOIS 记录</string>
+    <string name="onboarding_usecase_speed_q">我的网络究竟有多快？</string>
+    <string name="onboarding_usecase_speed_a">网速测试 - 下载、上传和时延</string>
+    <string name="onboarding_usecase_dns_q">需要查询或计算地址？</string>
+    <string name="onboarding_usecase_dns_a">DNS &amp; 子网 - 解析记录、计算子网、浏览 mDNS</string>
+
+    <!-- 新手引导 – 第 3 页：应用的组织方式 -->
+    <string name="onboarding_page3_title">你的工具，由你安排</string>
+    <string name="onboarding_page3_body">首页标签页列出所有工具。底栏让你一键直达 3 个常用工具 - 点按「更多」查看其余工具，并可随时根据需要固定或取消固定工具。</string>
+
+    <!-- 新手引导 – 第 4 页：权限与隐私 -->
+    <string name="onboarding_page4_title">几项权限，提前说明</string>
+
+    <string name="onboarding_page4_permission1">Wi-Fi 扫描需要位置权限，因为 Android 的 startScan 和 getScanResults 强制要求；你的位置信息不会被记录，也不会发送到任何地方。</string>
+    <string name="onboarding_page4_permission2">在 Android 13 及更高版本上，它还会申请「附近的 Wi-Fi 设备」权限。进行实时 Wi-Fi 扫描需要这两项权限，并且必须开启定位服务。</string>
+    <string name="onboarding_page4_privacy">应用不含统计分析和账号系统。诊断结果只保存在你的设备上。网速测试仅与 Cloudflare 交换模拟测量流量。</string>
+
+    <!-- 设置 – 引导部分 -->
+    <string name="settings_guide_section">引导</string>
+    <string name="settings_reset_onboarding_label">新手引导</string>
+    <string name="settings_reset_onboarding_subtitle">下次启动应用时再次显示新手引导。</string>
+    <string name="settings_reset_onboarding_button">重置新手引导</string>
+    <string name="settings_reset_onboarding_confirm_title">重置新手引导？</string>
+    <string name="settings_reset_onboarding_confirm_message">下次打开应用时会显示新手引导。</string>
+    <string name="settings_reset_onboarding_confirm_button">重置</string>
+
+    <!-- 帮助按钮的内容描述 -->
+    <string name="action_help">帮助</string>
+    <string name="a11y_loading">正在加载</string>
+    <string name="a11y_scanning">正在扫描</string>
+    <string name="wifi_signal_quality">信号质量</string>
+
+    <!-- Ping 帮助 -->
+    <string name="help_ping_title">Ping</string>
+    <string name="help_ping_concept_heading">什么是 Ping？</string>
+    <string name="help_ping_concept_body">网络中的每台设备都可以用一条称为 ICMP Echo Request 的小消息来询问「你在吗？」，这种做法俗称 Ping。如果目标可达，它会立即回复。从发出请求到收到回复之间的时间就是往返时延（RTT），它既能说明主机是否在线，也能反映它在网络上的距离。</string>
+    <string name="help_ping_what_heading">功能说明</string>
+    <string name="help_ping_what_body">检查主机是否可达，并测量往返时延（RTT）。应用只解析一次主机名，先尝试 ICMP Echo，当 ICMP 套接字不可用时改用 Android 的可达性检测。</string>
+    <string name="help_ping_params_heading">关键参数</string>
+    <string name="help_ping_results_heading">如何看懂结果</string>
+    <string-array name="help_ping_params_bullets">
+        <item>次数：要发送的 Ping 包数量。</item>
+        <item>超时：等待每个回复的时间，超过后计为丢失。</item>
+        <item>高级选项：可选择负载大小（0–1,472 字节）、TTL（1–255）和间隔（100–10,000 毫秒）。</item>
+        <item>持续 Ping：不停发送，直到你手动停止。</item>
+    </string-array>
+    <string-array name="help_ping_results_bullets">
+        <item>最小/平均/最大：观察到的最快、典型和最慢往返时延。</item>
+        <item>抖动：各次 Ping 之间 RTT 的变化幅度；抖动大说明连接不稳定，即使平均值看起来正常。</item>
+        <item>丢包率：未收到回复的 Ping 所占的百分比；只要高于 0%%，就说明可能存在网络拥塞或防火墙丢包。</item>
+        <item>不可达：网络在超时前明确拒绝了探测，这与悄悄超时不同。</item>
+    </string-array>
+
+    <!-- 路由追踪帮助 -->
+    <string name="help_traceroute_title">路由追踪</string>
+    <string name="help_traceroute_concept_heading">什么是路由追踪？</string>
+    <string name="help_traceroute_concept_body">每个数据包都带有一个「跳数计数器」（TTL，即 Time To Live，生存时间），它从一个初始值开始，每经过一台路由器就减 1。当路由器发现计数器归零时，会丢弃该包并回送一条「超时」消息，从而暴露自己的存在。路由追踪正是利用这一点：先发送计数器为 1 的包，再发送为 2、为 3 的包，依此类推，路径上的每台路由器便依次回复，逐跳描绘出数据的传输路线。</string>
+    <string name="help_traceroute_what_heading">功能说明</string>
+    <string name="help_traceroute_what_body">通过逐次增大 IP TTL 并记录每台有响应的路由器，找出数据包从你的设备到目标所经过的路径。</string>
+    <string name="help_traceroute_params_heading">关键参数</string>
+    <string name="help_traceroute_results_heading">如何看懂结果</string>
+    <string-array name="help_traceroute_params_bullets">
+        <item>最大跳数：最多尝试到第几跳，超过就停止。</item>
+        <item>探测协议：ICMP 更容易收到回复；UDP 则模仿传统的路由追踪工具。</item>
+        <item>每跳探测数：每个跳数发送多少个探测包，用来平衡不稳定的回复。</item>
+    </string-array>
+    <string-array name="help_traceroute_results_bullets">
+        <item>每一行代表路径上的一台路由器（一跳）。</item>
+        <item>「*」表示该路由器没有响应，这在配置为忽略此类探测的路由器上很常见，不一定代表有问题。</item>
+        <item>Journey Intelligence：对公网 IP 显示地理位置、RTT 分析，以及该跳归属的运营商。</item>
+    </string-array>
+
+    <!-- 端口扫描帮助 -->
+    <string name="help_portscan_title">端口扫描</string>
+    <string name="help_portscan_concept_heading">什么是端口？</string>
+    <string name="help_portscan_concept_body">IP 地址负责把数据送到正确的设备，就像街道地址把信件送到正确的大楼；端口号则负责把数据交给该设备上运行的正确服务，就像大楼里的房间号。Web 服务器通常监听 80 或 443 端口，邮件服务器监听 25 端口，等等；扫描一段端口，就能知道这些「房间」里哪些有人在应答。</string>
+    <string name="help_portscan_what_heading">功能说明</string>
+    <string name="help_portscan_what_body">尝试与主机上一段范围内的端口建立 TCP 连接，判断它们是开放、关闭还是被过滤。适合审计对外暴露了哪些服务。</string>
+    <string name="help_portscan_params_heading">关键参数</string>
+    <string name="help_portscan_results_heading">如何看懂结果</string>
+    <string-array name="help_portscan_params_bullets">
+        <item>端口范围：使用预设（常用、Web、全部）或输入自定义范围。</item>
+        <item>超时：等待每个端口的时长，超过后放弃。</item>
+        <item>并发数：同时检查多少个端口。</item>
+    </string-array>
+    <string-array name="help_portscan_results_bullets">
+        <item>开放：有响应，说明该端口上有服务在监听。</item>
+        <item>关闭：端口主动拒绝了连接，上面没有任何服务在监听。</item>
+        <item>被过滤：在超时时间内完全没有响应，通常是因为防火墙在悄悄拦截。</item>
+        <item>服务横幅：在可用时显示服务自报的身份信息（例如服务器名称/版本）。</item>
+    </string-array>
+
+    <!-- 局域网扫描帮助 -->
+    <string name="help_lan_title">局域网扫描</string>
+    <string name="help_lan_concept_heading">什么是子网扫描？</string>
+    <string name="help_lan_concept_body">家庭或办公网络中的设备共用一段私有地址，例如 192.168.1.1 到 192.168.1.254。这段范围用 CIDR 记作 192.168.1.0/24，其中「/24」表示包含多少个地址。扫描器会使用 ICMP、TCP 以及可选的本地名称探测，找出那些即使普通 Ping 被拦截也会应答的设备。</string>
+    <string name="help_lan_what_heading">功能说明</string>
+    <string name="help_lan_what_body">用 ICMP 和 TCP 检查子网中的每个地址，再用 NetBIOS 或 mDNS 名称作为额外的在线证据。对有响应的主机会补充主机名、开放端口，并尽力通过 ARP 查询 MAC 地址和厂商。</string>
+    <string name="help_lan_params_heading">关键参数</string>
+    <string name="help_lan_results_heading">如何看懂结果</string>
+    <string-array name="help_lan_params_bullets">
+        <item>子网（CIDR）：例如 192.168.1.0/24；点按「检测」可自动填入当前子网。</item>
+        <item>超时：等待每台主机响应的时长。</item>
+        <item>并发数：同时探测多少台主机。</item>
+    </string-array>
+    <string-array name="help_lan_results_bullets">
+        <item>发现方式标签会说明结果来自 ICMP、TCP、NetBIOS、mDNS 还是反向 DNS。</item>
+        <item>在 Android 10 及更高版本上可能无法获取 MAC 地址，因为应用无法读取 ARP 缓存。</item>
+        <item>网关来自当前网络的默认路由。点按主机可查看详情或扫描端口。</item>
+    </string-array>
+
+    <!-- DNS 帮助 -->
+    <string name="help_dns_title">DNS 查询</string>
+    <string name="help_dns_concept_heading">什么是 DNS？</string>
+    <string name="help_dns_concept_body">每个网站都有一个供计算机定位用的数字地址（例如 142.250.80.14），但人们习惯使用名称（例如 google.com）。DNS 就是互联网的电话簿：它把你输入的名称翻译成设备实际连接的号码。记录类型只是告诉这本电话簿你想要哪类信息——地址、邮件服务器、所有权证明，等等。</string>
+    <string name="help_dns_what_heading">功能说明</string>
+    <string name="help_dns_what_body">向 DNS 服务器查询与某个域名或 IP 地址关联的记录。支持 A、AAAA、MX、TXT、CNAME、NS、SOA、PTR、SRV 等类型。</string>
+    <string name="help_dns_params_heading">关键参数</string>
+    <string name="help_dns_results_heading">如何看懂结果</string>
+    <string-array name="help_dns_params_bullets">
+        <item>域名：要查询的主机名或 IP。</item>
+        <item>记录类型：A/AAAA 返回 IP 地址；MX 返回为该域名处理邮件的邮件服务器；TXT 保存任意文本，常用于证明域名所有权；CNAME 是指向另一个名称的别名；NS 列出该域名的权威服务器；SOA 保存区域管理信息；PTR 把 IP 反向解析回主机名；SRV 指向某项服务对应的主机和端口。</item>
+        <item>DNS 服务器：可选择系统、Google、Cloudflare、OpenDNS、Quad9，或输入自定义解析服务器的 IP。</item>
+    </string-array>
+    <string-array name="help_dns_results_bullets">
+        <item>TTL（time-to-live，生存时间）以秒为单位，它告诉其他解析服务器和浏览器在重新查询前可以将该答案缓存多久。</item>
+        <item>「原始响应」标签页显示完整的 DNS 线格式响应。</item>
+        <item>RCODE、标志位、Authority、Additional 以及实际使用的服务器，可以解释否定应答和解析服务器的行为。</item>
+        <item>当 Android 提供相关信息时会显示私人 DNS；系统 DNS 绝不会被悄悄替换成其他解析服务器。</item>
+        <item>使用 PTR 查询可以把 IP 地址反向解析为主机名。</item>
+    </string-array>
+
+    <!-- Wi-Fi 扫描帮助 -->
+    <string name="help_wifi_title">Wi-Fi 扫描</string>
+    <string name="help_wifi_concept_heading">什么是 Wi-Fi 信道？</string>
+
+    <string name="help_wifi_concept_body">Wi-Fi 无线电通过称为信道的频段来通信，就像每个电台都有自己的频率，彼此不会互相干扰。你看到的每个网络都是一个有名字的分组（SSID），可以由一个或多个物理无线电发射，每个无线电都有自己的硬件地址（BSSID）——Mesh 组网或双频路由器会显示为一个 SSID，但对应多个 BSSID。2.4 GHz 信道穿墙传播更远，但只有 3 个互不重叠，因此格外拥挤；5 GHz 和 6 GHz 有更多互不重叠的信道、速度更快，代价是覆盖范围更短。</string>
+    <string name="help_wifi_what_heading">功能说明</string>
+    <string name="help_wifi_what_body">触发系统 Wi-Fi 扫描，按网络（SSID）归类附近的接入点，并在频谱图上显示信道占用情况。需要开启定位服务并授予 Android 的 Wi-Fi 扫描权限；你的位置不会被记录或发送。</string>
+    <string name="help_wifi_params_heading">关键参数</string>
+    <string name="help_wifi_results_heading">如何解读结果</string>
+    <string-array name="help_wifi_params_bullets">
+        <item>扫描：请求一次新的系统扫描。</item>
+        <item>自动刷新：可选择关闭、15 秒、30 秒或 60 秒。</item>
+        <item>如果 Android 限制了扫描请求的频率，界面会显示缓存结果的生成时间。</item>
+        <item>必须开启定位服务，Android 才会返回扫描结果。</item>
+        <item>频段筛选：只显示 2.4 GHz、5 GHz 或 6 GHz 网络。</item>
+        <item>排序：按信号强度、信道或 SSID 排序。</item>
+    </string-array>
+    <string-array name="help_wifi_results_bullets">
+        <item>频谱图按频率显示各接入点的信号曲线。</item>
+        <item>曲线重叠表示信道拥塞，即多个网络争抢同一段频谱。</item>
+        <item>「最佳信道」提示会推荐最不拥挤的 2.4 GHz 信道。</item>
+        <item>点按某个网络可展开每个 BSSID 的详情；点按接入点条目可查看完整连接详情。</item>
+    </string-array>
+
+    <!-- 拓扑帮助 -->
+    <string name="help_topology_title">网络拓扑</string>
+    <string name="help_topology_concept_heading">什么是网络拓扑发现？</string>
+    <string name="help_topology_concept_body">交换机和路由器支持 SNMP（简单网络管理协议），这是网络设备报告自身状态和配置的标准方式，就像每台设备都有一个工具可以读取的公开状态页。本应用会先问某台设备「你连接了哪些设备？」，再向它的每个邻居提出同样的问题，一跳一跳地构建出地图，就像在聚会上顺着介绍链一路问下去。最终得到的就是交换机和路由器之间物理连接方式的图景。</string>
+    <string name="help_topology_what_heading">功能说明</string>
+    <string name="help_topology_what_body">使用 SNMP 查询作为起点的交换机或路由器并发现其邻居，为你的网络基础设施构建可交互的拓扑图。</string>
+    <string name="help_topology_params_heading">关键参数</string>
+    <string name="help_topology_results_heading">如何解读结果</string>
+    <string-array name="help_topology_params_bullets">
+        <item>目标 IP：要查询的第一台设备的 IP，也就是地图的起点。</item>
+        <item>SNMP 版本：v1、v2c 或 v3；v3 增加了旧版本所没有的身份验证和加密。</item>
+        <item>团体字符串：v1/v2c 所需的共享密码（默认为 \'public\'，这是出了名不安全的默认值，许多设备至今仍在沿用，建议尽量修改）。</item>
+        <item>SNMP v3 的加密需要先通过身份验证；认证密码和加密密码仅在扫描期间保存在内存中，绝不会写入日志。</item>
+        <item>最大跳数：最多跟随多少层设备之间的相互介绍后停止。</item>
+    </string-array>
+    <string-array name="help_topology_results_bullets">
+        <item>节点代表发现的设备；连线代表 SNMP 报告的设备间链路。</item>
+        <item>双指捏合可缩放，拖动可平移浏览图表。</item>
+        <item>点按节点可查看其系统信息、接口、VLAN 和邻居。</item>
+        <item>适用于梳理办公网络、发现意外接入的设备，或在排查连接问题前记录基础设施情况。</item>
+    </string-array>
+
+    <!-- TLS 证书检测帮助 -->
+    <string name="help_tls_title">TLS 证书检测</string>
+    <string name="help_tls_concept_heading">什么是 TLS？证书链为什么重要？</string>
+    <string name="help_tls_concept_body">TLS（HTTPS 中的那个「S」）会加密你的设备与服务器之间的流量，让网络上的其他人无法读取。但仅有加密并不能证明你在和谁通信，这正是证书的用途：证书就像一张身份证明，说明「这台服务器确实是 example.com」，并由受信任的机构签发。证书链（叶证书 → 中间证书 → 根证书）记录了谁为谁担保的凭据，最终指向设备默认信任的一小组根证书机构。</string>
+    <string name="help_tls_what_heading">功能说明</string>
+    <string name="help_tls_what_body">与主机建立 TLS 连接并获取完整证书链，包括浏览器通常会隐藏的已过期、自签名或不受信任的证书。</string>
+    <string name="help_tls_params_heading">关键参数</string>
+    <string name="help_tls_results_heading">如何解读结果</string>
+    <string-array name="help_tls_params_bullets">
+        <item>主机：要连接的域名或 IP。</item>
+        <item>端口：TLS 端口（HTTPS 默认为 443；8443、993、465 是常见的替代端口）。</item>
+    </string-array>
+    <string-array name="help_tls_results_bullets">
+        <item>连接卡片会显示 TLS 版本、密码套件和握手耗时。</item>
+        <item>展开证书链中的每张证书（叶证书、中间证书、根证书），可查看主体、签发者、有效期、SAN 和 SHA-256 指纹。</item>
+        <item>红色徽标表示已过期：该网站的「身份证」已失效，连接无法得到完整验证，类似浏览器的警告页面。</item>
+    </string-array>
+
+    <!-- WHOIS 查询帮助 -->
+    <string name="help_whois_title">WHOIS 查询</string>
+    <string name="help_whois_concept_heading">什么是 WHOIS？</string>
+    <string name="help_whois_concept_body">WHOIS 是一份公开的登记记录，记载域名或某段 IP 地址归谁所有以及从何时开始持有，就像查询房产证一样。每个域名和 IP 地址段都在某处登记了所有者，任何人都可以通过 WHOIS 服务器查询这些记录。</string>
+    <string name="help_whois_what_heading">功能说明</string>
+    <string name="help_whois_what_body">查询 WHOIS 服务器，获取域名、IP 地址或自治系统号（ASN）的注册信息。</string>
+    <string name="help_whois_params_heading">输入内容</string>
+    <string name="help_whois_results_heading">如何解读结果</string>
+    <string-array name="help_whois_params_bullets">
+        <item>域名：例如 example.com。</item>
+        <item>IP 地址：例如 8.8.8.8。</item>
+        <item>ASN：例如 AS15169；自治系统号用于标识控制某段地址并对外通告路由的大型网络或组织（通常是 ISP），层级在单个 IP 地址段之上。</item>
+        <item>使用快捷填充标签可插入各类型的示例。</item>
+    </string-array>
+    <string-array name="help_whois_results_bullets">
+        <item>域名：注册人、注册与到期日期、名称服务器和状态码，便于检查域名是否即将到期，或调查网站背后的所有者。</item>
+        <item>IP：网络地址段、所属组织和国家，便于查找某个地址背后的 ISP 或托管服务商。</item>
+        <item>「原始数据」部分显示未经处理的 WHOIS 服务器响应。</item>
+    </string-array>
+
+    <!-- HTTP 探测帮助 -->
+    <string name="help_httprobe_title">HTTP 探测</string>
+    <string name="help_httprobe_concept_heading">「访问」一个 URL 时发生了什么？</string>
+    <string name="help_httprobe_concept_body">当你请求一个 URL 时，设备会与服务器建立连接，并发送一小段文字说明你想要什么，包括请求方法、请求头和可能的请求正文。服务器则以状态码、自己的响应头和内容作为回应。本工具让你直接发送该请求并查看整个交互过程，包括浏览器会自动检查却很少展示给你的安全相关响应头。</string>
+    <string name="help_httprobe_what_heading">功能说明</string>
+    <string name="help_httprobe_what_body">向 URL 发送 HTTP 或 HTTPS 请求，并显示完整响应，包括状态、响应头、正文、重定向链路以及安全响应头分析。</string>
+    <string name="help_httprobe_params_heading">关键参数</string>
+    <string name="help_httprobe_results_heading">如何解读结果</string>
+    <string name="help_httprobe_security_heading">安全响应头检查</string>
+    <string-array name="help_httprobe_params_bullets">
+        <item>URL：完整地址，包含 https://</item>
+        <item>方法：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS。</item>
+        <item>自定义请求头：可添加 Authorization、Accept、Content-Type 等。</item>
+        <item>请求正文：POST/PUT 使用的 JSON 或其他负载。</item>
+        <item>跟随重定向：自动跟随 3xx 响应。</item>
+    </string-array>
+    <string-array name="help_httprobe_results_bullets">
+        <item>概览：状态码、响应时间和重定向后的最终 URL。</item>
+        <item>响应头：所有请求头和响应头。</item>
+        <item>正文：响应正文，如被截断会显示大小和截断信息。</item>
+        <item>安全：见下文。</item>
+    </string-array>
+    <string-array name="help_httprobe_security_bullets">
+        <item>HSTS：强制浏览器始终使用本站点的加密（https）版本。</item>
+        <item>CSP：限制页面可加载的脚本和资源，可拦截多种注入攻击。</item>
+        <item>X-Frame-Options：阻止其他网站把本页面嵌入隐藏框架来诱骗用户点击（点击劫持）。</item>
+        <item>X-Content-Type-Options：阻止浏览器以可被攻击者利用的方式猜测文件类型。</item>
+        <item>Referrer-Policy：控制当前 URL 有多少信息会泄露给你点击跳转到的网站。</item>
+        <item>Permissions-Policy：限制页面可以使用的浏览器功能（摄像头、麦克风、定位）。</item>
+        <item>Cross-Origin-Opener-Policy：将该标签页隔离，防止它被自己打开的或打开它的恶意页面操控。</item>
+        <item>Cross-Origin-Embedder-Policy：要求跨源资源明确同意后本页面才能使用，从而封堵另一条跨标签页攻击途径。</item>
+        <item>Server：响应是否暴露了攻击者可用来查找已知漏洞的软件或版本信息。</item>
+    </string-array>
+
+    <!-- 子网计算器帮助 -->
+    <string name="help_subnet_title">子网计算器</string>
+
+    <string name="help_subnet_concept_heading">什么是子网？</string>
+    <string name="help_subnet_concept_body">一个 IP 地址由两部分组成：一部分是网络部分，由本地网络中的每台设备共用；另一部分是主机部分，每台设备各不相同——就像整条街共用一个街道名，而每栋房子各有自己的门牌号。子网掩码（CIDR 记法中「/24」这样的数字）说明了各部分各占多少位，由此决定了能容纳多少台设备，以及一个网络的地址在哪里结束、下一个网络的地址从哪里开始。把大网络拆分成多个小子网，正是各类组织让流量更有秩序、更安全、也更容易管理的方式。</string>
+    <string name="help_subnet_what_heading">功能说明</string>
+    <string name="help_subnet_what_body">根据输入的 CIDR 记法或点分十进制掩码计算网络信息，还能找出刚好覆盖指定 IP 范围的最小子网。</string>
+    <string name="help_subnet_params_heading">输入方式</string>
+    <string name="help_subnet_results_heading">如何解读结果</string>
+    <string-array name="help_subnet_params_bullets">
+        <item>CIDR/掩码模式——输入类似 192.168.1.0/24 或 10.0.0.0/255.255.0.0 的地址。</item>
+        <item>IP 范围模式——输入所需范围的最小和最大 IP，工具会找出能完整包含该范围的最小子网。</item>
+    </string-array>
+    <string-array name="help_subnet_results_bullets">
+        <item>网络地址和广播地址、第一个/最后一个可用主机地址，以及可用主机数量。</item>
+        <item>二进制拆解——明确显示哪些位属于网络位、哪些属于主机位。</item>
+        <item>等价记法——CIDR、点分十进制、通配符掩码、十六进制和二进制表示。</item>
+        <item>点按「i」图标可查看每个字段的说明。</item>
+    </string-array>
+
+    <!-- mDNS 浏览帮助 -->
+    <string name="help_mdns_title">mDNS 浏览</string>
+    <string name="help_mdns_concept_heading">什么是 mDNS？</string>
+    <string name="help_mdns_concept_body">普通 DNS 依赖中心服务器来查询名称。mDNS（也叫 Bonjour 或 Zeroconf）则不需要：本地网络中的设备会把自己的名称和服务「喊」到一个特殊的多播地址，网络上所有正在监听的设备都能同时收到，其他设备只需监听这些通告即可。正因如此，打印机或音箱无需你手动输入地址，就能被自动发现。</string>
+    <string name="help_mdns_what_heading">功能说明</string>
+    <string name="help_mdns_what_body">监听本地网络中的多播 DNS（mDNS / Bonjour / Zeroconf）通告，用于发现打印机、媒体服务器、智能家居设备和开发者工具等服务。</string>
+    <string name="help_mdns_params_heading">主要参数</string>
+    <string name="help_mdns_results_heading">如何解读结果</string>
+    <string-array name="help_mdns_params_bullets">
+        <item>扫描——开启 8 秒的发现窗口；多运行几次，可以抓到不常发布通告的设备。</item>
+        <item>停止——提前结束当前扫描。</item>
+        <item>重置——清空所有结果。</item>
+    </string-array>
+    <string-array name="help_mdns_results_bullets">
+        <item>服务按类型分组显示（例如 _http._tcp、_airplay._tcp）。</item>
+        <item>点按分组即可展开，查看各个服务实例。</item>
+        <item>每个实例都会显示其主机名、IP 地址、端口，以及 TXT 记录中的各项属性。</item>
+    </string-array>
+
+    <!-- 网速测试帮助 -->
+    <string name="help_speedtest_title">网速测试</string>
+    <string name="help_speedtest_concept_heading">时延与带宽——到底测的是什么？</string>
+    <string name="help_speedtest_concept_body">时延是指一条小消息发出后收到回复所需的时间，游戏、视频通话等交互式场景对它很敏感。带宽（或称吞吐量）是指连接建立后每秒能传输多少数据，它决定着下载速度和流媒体画质。多数家庭宽带套餐都是非对称的，下行带宽远高于上行带宽，因为日常使用以下载和流媒体播放为主，很少需要向外发送大量数据。</string>
+    <string name="help_speedtest_what_heading">功能说明</string>
+    <string name="help_speedtest_what_body">通过与 Cloudflare 的网速测试服务（speed.cloudflare.com）交换数据，测量网络连接的时延、下载速度和上传速度。</string>
+    <string name="help_speedtest_phases_heading">测试阶段</string>
+    <string name="help_speedtest_phases_body">测试会按顺序自动执行各个阶段。</string>
+    <string name="help_speedtest_results_heading">如何解读结果</string>
+    <string-array name="help_speedtest_phases_bullets">
+        <item>时延——发送小请求，测量往返时延和抖动。</item>
+        <item>下载——逐级下载更大的负载，并记录吞吐量。</item>
+        <item>上传——上传数据，测量上传速度。</item>
+    </string-array>
+    <string-array name="help_speedtest_results_bullets">
+        <item>平均速度——整个阶段内持续保持的吞吐量。</item>
+        <item>峰值速度——观测到的最高瞬时速度。</item>
+        <item>吞吐量图表展示速度随时间的变化——曲线平直说明存在带宽上限；曲线起伏则说明网络不稳定。</item>
+    </string-array>
+
+    <!-- 网速测试 -->
+    <string name="speedtest_screen_title">网速测试</string>
+    <string name="speedtest_screen_subtitle">通过 Cloudflare 的全球网络测量下载、上传速度和时延</string>
+    <string name="speedtest_attribution">由 Cloudflare Speed Test 提供支持</string>
+    <string name="speedtest_attribution_note">测试流量会发送到 Cloudflare 的 speed.cloudflare.com 服务并由其测量。Net Swiss Knife 与 Cloudflare, Inc. 没有关联，也未获得其赞助或背书。</string>
+
+    <string name="speedtest_idle_title">准备测试你的网络连接</string>
+    <string name="speedtest_idle_subtitle">依次测量时延、下载速度和上传速度</string>
+    <string name="speedtest_start_button">开始测试</string>
+    <string name="speedtest_cancel_button">取消</string>
+    <string name="speedtest_retry">再次测试</string>
+    <string name="speedtest_share">分享结果</string>
+
+    <string name="speedtest_phase_latency">时延</string>
+    <string name="speedtest_phase_download">下载</string>
+    <string name="speedtest_phase_upload">上传</string>
+
+    <string name="speedtest_running_latency">正在测量时延…</string>
+    <string name="speedtest_running_download">正在测试下载速度…</string>
+    <string name="speedtest_running_upload">正在测试上传速度…</string>
+    <string name="speedtest_error_title">网速测试失败</string>
+    <string name="speedtest_error_phase">在%1$s阶段失败</string>
+
+    <string name="speedtest_mbps_suffix">Mbps</string>
+    <string name="speedtest_ms_suffix">ms</string>
+
+    <string name="speedtest_latency_header">时延</string>
+    <string name="speedtest_latency_min">最小</string>
+    <string name="speedtest_latency_avg">平均</string>
+    <string name="speedtest_latency_max">最大</string>
+    <string name="speedtest_latency_jitter">抖动</string>
+
+    <string name="speedtest_download_header">下载</string>
+    <string name="speedtest_upload_header">上传</string>
+    <string name="speedtest_avg_speed">平均速度</string>
+    <string name="speedtest_peak_speed">峰值速度</string>
+    <string name="speedtest_data_transferred">传输数据量</string>
+    <string name="speedtest_chart_title">吞吐量随时间的变化</string>
+    <string name="speedtest_results_header">结果</string>
+
+    <!-- 输入校验 -->
+    <string name="error_invalid_host">主机名或 IP 中不能包含空格</string>
+    <string name="error_invalid_url">请输入有效的 URL（例如 https://example.com）</string>
+
+    <!-- 网络唤醒 -->
+    <string name="wol_screen_title">网络唤醒</string>
+    <string name="wol_screen_subtitle">用魔术包唤醒休眠中的设备</string>
+    <string name="wol_mac_label">MAC 地址</string>
+    <string name="wol_mac_placeholder">AA:BB:CC:DD:EE:FF</string>
+    <string name="wol_mac_invalid">请输入有效的 MAC 地址（AA:BB:CC:DD:EE:FF）</string>
+    <string name="wol_advanced_options">高级选项</string>
+    <string name="wol_broadcast_label">广播地址</string>
+    <string name="wol_broadcast_hint">255.255.255.255 可送达整个本地网络</string>
+    <string name="wol_port_label">UDP 端口</string>
+    <string name="wol_port_hint">惯例使用端口 9（discard），有些设备使用端口 7</string>
+    <string name="wol_send_button">发送魔术包</string>
+    <string name="wol_sending">正在发送魔术包…</string>
+    <string name="wol_success_title">魔术包已发送</string>
+    <string name="wol_success_detail">已发送至 %1$s（经由 %2$s，端口 %3$d，共 %4$d 个包）</string>
+    <string name="wol_success_note">发送后无法确认是否送达：目标机器必须在固件/操作系统中启用网络唤醒，并与发送方处于同一网络。</string>
+    <string name="wol_send_again">再次发送</string>
+    <string name="wol_error_title">发送失败</string>
+    <string name="wol_retry_button">重试</string>
+    <string name="help_wol_concept_heading">什么是网络唤醒？</string>
+    <string name="help_wol_concept_body">网络唤醒（WOL）通过发送一个特殊的 UDP「魔术包」来唤醒已关机或休眠的电脑，包内包含重复 16 次的 MAC 地址。即使机器处于休眠状态，网卡也会持续监听这一特征数据。</string>
+    <string name="help_wol_mac_heading">如何找到 MAC 地址</string>
+    <string name="help_wol_mac_body">可以在设备开机时用「局域网扫描」工具发现设备并读取其 MAC 地址，也可以查看设备自身的网络设置。支持 AA:BB:CC:DD:EE:FF、AA-BB-CC-DD-EE-FF、AABB.CCDD.EEFF 和 AABBCCDDEEFF 等格式。</string>
+    <string name="help_wol_requirements_heading">设备要求</string>
+    <string name="help_wol_requirements_body">必须在目标设备的 BIOS/UEFI 和操作系统网卡设置中启用网络唤醒。有线以太网最可靠；Wi-Fi 唤醒（WoWLAN）的支持情况因硬件而异。</string>
+    <string name="help_wol_broadcast_heading">广播地址与端口</string>
+    <string name="help_wol_broadcast_body">默认的 255.255.255.255 会广播到整个本地网络。若只想针对某个子网，请使用该子网的定向广播地址（例如 192.168.1.255）。端口 9 是惯例用法，端口 7 也常被使用。</string>
+
+    <!-- DNS 自定义服务器校验 -->
+    <string name="dns_custom_server_invalid">请输入有效的 IPv4 或 IPv6 地址</string>
+
+    <!-- 设置：动态取色 -->
+    <string name="settings_dynamic_color_label">Material You 动态取色</string>
+    <string name="settings_dynamic_color_subtitle">使用基于壁纸的配色（Android 12 及以上）</string>
+
+    <!-- HTTP 探测安全评级 -->
+    <string name="security_rating_pass">通过</string>
+    <string name="security_rating_warn">警告</string>
+    <string name="security_rating_fail">失败</string>
+    <string name="security_rating_info">信息</string>
+
+    <!-- ── 二开新增：工具名称与一句话说明（首页卡片 / 更多面板 / 底部导航） ── -->
+    <string name="tool_ping_label">Ping</string>
+    <string name="tool_ping_short">Ping</string>
+    <string name="tool_ping_desc">连通性检测与往返时延</string>
+    <string name="tool_traceroute_label">路由追踪</string>
+    <string name="tool_traceroute_short">路由</string>
+    <string name="tool_traceroute_desc">逐跳分析网络路径</string>
+    <string name="tool_ports_label">端口扫描</string>
+    <string name="tool_ports_short">端口</string>
+    <string name="tool_ports_desc">TCP 端口连通性检测</string>
+    <string name="tool_lan_label">局域网扫描</string>
+    <string name="tool_lan_short">局域网</string>
+    <string name="tool_lan_desc">发现局域网内的设备</string>
+    <string name="tool_dns_label">DNS 查询</string>
+    <string name="tool_dns_short">DNS</string>
+    <string name="tool_dns_desc">解析主机名与各类记录</string>
+    <string name="tool_wifi_label">Wi-Fi 扫描</string>
+    <string name="tool_wifi_short">Wi-Fi</string>
+    <string name="tool_wifi_desc">扫描信道与接入点</string>
+    <string name="tool_topology_label">网络拓扑</string>
+    <string name="tool_topology_short">拓扑</string>
+    <string name="tool_topology_desc">通过 SNMP 发现交换机与邻居</string>
+    <string name="tool_tls_label">TLS 证书检测</string>
+    <string name="tool_tls_short">TLS</string>
+    <string name="tool_tls_desc">SSL/TLS 证书链检测</string>
+    <string name="tool_whois_label">WHOIS 查询</string>
+    <string name="tool_whois_short">WHOIS</string>
+    <string name="tool_whois_desc">域名与 IP 注册信息查询</string>
+    <string name="tool_httprobe_label">HTTP 探测</string>
+    <string name="tool_httprobe_short">HTTP</string>
+    <string name="tool_httprobe_desc">HTTP/HTTPS 请求测试与安全响应头分析</string>
+    <string name="tool_subnet_label">子网计算器</string>
+    <string name="tool_subnet_short">子网</string>
+    <string name="tool_subnet_desc">IPv4 子网计算，含二进制拆分与表示法转换</string>
+    <string name="tool_mdns_label">mDNS 浏览</string>
+    <string name="tool_mdns_short">mDNS</string>
+    <string name="tool_mdns_desc">通过组播 DNS 发现局域网服务</string>
+    <string name="tool_speedtest_label">网速测试</string>
+    <string name="tool_speedtest_short">测速</string>
+    <string name="tool_speedtest_desc">通过 Cloudflare 测试下载/上传速度与时延</string>
+    <string name="tool_wol_label">网络唤醒</string>
+    <string name="tool_wol_short">WOL</string>
+    <string name="tool_wol_desc">用魔术包唤醒休眠设备</string>
+
+    <!-- 通用帮助面板 -->
+    <string name="help_sheet_how_to_use">使用说明</string>
+
+    <!-- 崩溃页补充文案 -->
+    <string name="crash_no_stack_trace">无堆栈信息</string>
+    <string name="crash_unknown_exception">未知异常</string>
+    <string name="crash_unknown_thread">未知</string>
+    <string name="crash_no_message">无消息</string>
+    <string name="crash_clip_label">崩溃报告</string>
+    <string name="crash_report_header">Net Swiss Knife 崩溃报告</string>
+    <string name="crash_report_time">时间</string>
+    <string name="crash_report_thread">线程</string>
+    <string name="crash_report_exception">异常</string>
+    <string name="crash_report_message">消息</string>
+    <string name="crash_report_stack_trace">堆栈信息</string>
+
+    <!-- 设置 – 应用语言 -->
+    <string name="settings_language_label">应用语言</string>
+    <string name="settings_language_subtitle">选择本应用使用的语言</string>
+</resources>

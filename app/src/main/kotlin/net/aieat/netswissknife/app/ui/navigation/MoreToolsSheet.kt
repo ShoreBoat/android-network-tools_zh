@@ -347,12 +347,12 @@ private fun ToolSheetRow(
                 .padding(horizontal = 14.dp),
         ) {
             Text(
-                text = tool.label,
+                text = stringResource(tool.labelRes),
                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
                 color = MaterialTheme.colorScheme.onSurface,
             )
             Text(
-                text = tool.description,
+                text = stringResource(tool.descriptionRes),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -362,9 +362,9 @@ private fun ToolSheetRow(
             Icon(
                 imageVector = if (isPinned) Icons.Filled.PushPin else Icons.Outlined.PushPin,
                 contentDescription = if (isPinned)
-                    stringResource(R.string.more_unpin_description, tool.label)
+                    stringResource(R.string.more_unpin_description, stringResource(tool.labelRes))
                 else
-                    stringResource(R.string.more_pin_description, tool.label),
+                    stringResource(R.string.more_pin_description, stringResource(tool.labelRes)),
                 tint = pinTint,
                 modifier = Modifier.size(20.dp),
             )

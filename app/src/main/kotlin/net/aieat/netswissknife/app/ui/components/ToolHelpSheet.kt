@@ -24,8 +24,10 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import net.aieat.netswissknife.app.R
 
 /**
  * One section of a tool's help sheet.
@@ -74,7 +76,7 @@ fun ToolHelpSheet(
             )
             Spacer(Modifier.height(4.dp))
             Text(
-                text = "How to use",
+                text = stringResource(R.string.help_sheet_how_to_use),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.primary
             )

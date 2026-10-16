@@ -1,6 +1,7 @@
 package net.aieat.netswissknife.app.ui.navigation
 
 import android.net.Uri
+import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountTree
 import androidx.compose.material.icons.filled.BugReport
@@ -20,13 +21,14 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.WifiFind
 import androidx.compose.ui.graphics.vector.ImageVector
+import net.aieat.netswissknife.app.R
 
 data class ToolInfo(
     val route: String,
-    val label: String,
-    val shortLabel: String,
+    @StringRes val labelRes: Int,
+    @StringRes val shortLabelRes: Int,
     val icon: ImageVector,
-    val description: String
+    @StringRes val descriptionRes: Int
 )
 
 sealed class NavRoutes(
@@ -62,20 +64,20 @@ sealed class NavRoutes(
     companion object {
         /** All navigable tool screens (excluding Home). */
         val allTools = listOf(
-            ToolInfo("ping",       "Ping",          "Ping",  Icons.Default.NetworkCheck, "Reachability and round-trip latency"),
-            ToolInfo("traceroute", "Traceroute",    "Trace", Icons.Default.Router,       "Network path hop analysis"),
-            ToolInfo("ports",      "Port Scanner",  "Ports", Icons.Default.TravelExplore, "TCP port reachability"),
-            ToolInfo("lan",        "LAN Scanner",   "LAN",   Icons.Default.Devices,       "Local device discovery"),
-            ToolInfo("dns",        "DNS Lookup",    "DNS",   Icons.Default.Language,     "Resolve hostnames & records"),
-            ToolInfo("wifi_scan",  "Wi-Fi Scanner", "Wi-Fi",     Icons.Default.WifiFind,     "Scan channels & access points"),
-            ToolInfo("topology",   "Network Topology", "Topology", Icons.Default.AccountTree, "SNMP switch & neighbour discovery"),
-            ToolInfo("tls",        "TLS Inspector",    "TLS",      Icons.Default.Lock,         "SSL/TLS certificate chain inspector"),
-            ToolInfo("whois",      "WHOIS Lookup",  "WHOIS", Icons.AutoMirrored.Filled.ManageSearch, "Domain and IP registration lookup"),
-            ToolInfo("httprobe",   "HTTP Probe",    "HTTP",  Icons.Default.Http,          "HTTP/HTTPS request tester with security header analysis"),
-            ToolInfo("subnet",     "Subnet Calc",   "Subnet", Icons.Default.Calculate,     "IPv4 subnet calculator with binary breakdown and notation conversion"),
-            ToolInfo("mdns",       "mDNS Browser",  "mDNS",  Icons.Default.CellTower,      "Discover LAN services via multicast DNS"),
-            ToolInfo("speedtest",  "Speed Test",    "Speed", Icons.Default.Speed,          "Download, upload speed and latency via Cloudflare"),
-            ToolInfo("wol",        "Wake-on-LAN",   "WOL",   Icons.Default.PowerSettingsNew, "Wake sleeping devices with a magic packet"),
+            ToolInfo("ping",       R.string.tool_ping_label,       R.string.tool_ping_short,       Icons.Default.NetworkCheck, R.string.tool_ping_desc),
+            ToolInfo("traceroute", R.string.tool_traceroute_label, R.string.tool_traceroute_short, Icons.Default.Router,       R.string.tool_traceroute_desc),
+            ToolInfo("ports",      R.string.tool_ports_label,      R.string.tool_ports_short,      Icons.Default.TravelExplore, R.string.tool_ports_desc),
+            ToolInfo("lan",        R.string.tool_lan_label,        R.string.tool_lan_short,        Icons.Default.Devices,       R.string.tool_lan_desc),
+            ToolInfo("dns",        R.string.tool_dns_label,        R.string.tool_dns_short,        Icons.Default.Language,      R.string.tool_dns_desc),
+            ToolInfo("wifi_scan",  R.string.tool_wifi_label,       R.string.tool_wifi_short,       Icons.Default.WifiFind,      R.string.tool_wifi_desc),
+            ToolInfo("topology",   R.string.tool_topology_label,   R.string.tool_topology_short,   Icons.Default.AccountTree,   R.string.tool_topology_desc),
+            ToolInfo("tls",        R.string.tool_tls_label,        R.string.tool_tls_short,        Icons.Default.Lock,          R.string.tool_tls_desc),
+            ToolInfo("whois",      R.string.tool_whois_label,      R.string.tool_whois_short,      Icons.AutoMirrored.Filled.ManageSearch, R.string.tool_whois_desc),
+            ToolInfo("httprobe",   R.string.tool_httprobe_label,   R.string.tool_httprobe_short,   Icons.Default.Http,          R.string.tool_httprobe_desc),
+            ToolInfo("subnet",     R.string.tool_subnet_label,     R.string.tool_subnet_short,     Icons.Default.Calculate,     R.string.tool_subnet_desc),
+            ToolInfo("mdns",       R.string.tool_mdns_label,       R.string.tool_mdns_short,       Icons.Default.CellTower,     R.string.tool_mdns_desc),
+            ToolInfo("speedtest",  R.string.tool_speedtest_label,  R.string.tool_speedtest_short,  Icons.Default.Speed,         R.string.tool_speedtest_desc),
+            ToolInfo("wol",        R.string.tool_wol_label,        R.string.tool_wol_short,        Icons.Default.PowerSettingsNew, R.string.tool_wol_desc),
         )
 
         /** Default pinned routes shown in the bottom nav (max MAX_PINNED). */

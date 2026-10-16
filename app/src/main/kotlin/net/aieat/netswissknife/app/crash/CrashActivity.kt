@@ -67,10 +67,10 @@ class CrashActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
 
-        val stackTrace = intent.getStringExtra(EXTRA_STACK_TRACE) ?: "No stack trace"
-        val exceptionClass = intent.getStringExtra(EXTRA_EXCEPTION_CLASS) ?: "UnknownException"
+        val stackTrace = intent.getStringExtra(EXTRA_STACK_TRACE) ?: getString(R.string.crash_no_stack_trace)
+        val exceptionClass = intent.getStringExtra(EXTRA_EXCEPTION_CLASS) ?: getString(R.string.crash_unknown_exception)
         val exceptionMessage = intent.getStringExtra(EXTRA_EXCEPTION_MESSAGE) ?: ""
-        val threadName = intent.getStringExtra(EXTRA_THREAD_NAME) ?: "unknown"
+        val threadName = intent.getStringExtra(EXTRA_THREAD_NAME) ?: getString(R.string.crash_unknown_thread)
         val timestamp = intent.getStringExtra(EXTRA_TIMESTAMP) ?: ""
 
         setContent {
@@ -99,7 +99,7 @@ class CrashActivity : ComponentActivity() {
 
     private fun copyToClipboard(text: String) {
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        clipboard.setPrimaryClip(ClipData.newPlainText("Crash Report", text))
+        clipboard.setPrimaryClip(ClipData.newPlainText(getString(R.string.crash_clip_label), text))
     }
 
     private fun shareReport(text: String) {
@@ -118,13 +118,13 @@ class CrashActivity : ComponentActivity() {
         timestamp: String,
         stackTrace: String,
     ): String = buildString {
-        appendLine("=== Net Swiss Knife Crash Report ===")
-        appendLine("Time:      $timestamp")
-        appendLine("Thread:    $threadName")
-        appendLine("Exception: $exceptionClass")
-        appendLine("Message:   $exceptionMessage")
+        appendLine("=== ${getString(R.string.crash_report_header)} ===")
+        appendLine("${getString(R.string.crash_report_time)}:      $timestamp")
+        appendLine("${getString(R.string.crash_report_thread)}:    $threadName")
+        appendLine("${getString(R.string.crash_report_exception)}: $exceptionClass")
+        appendLine("${getString(R.string.crash_report_message)}:   $exceptionMessage")
         appendLine()
-        appendLine("--- Stack Trace ---")
+        appendLine("--- ${getString(R.string.crash_report_stack_trace)} ---")
         appendLine(stackTrace)
     }
 
